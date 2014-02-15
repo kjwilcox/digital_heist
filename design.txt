@@ -1,2 +1,31 @@
 
-This is a test of adding files to my github repo.
+Digital Heist Design Document
+
+Digital Heist (real title pending), is a puzzle action game taking place in 
+the cyberpunk future. The main character attempts to pull of heists with the 
+help of his/her cyber navigator (need a better name). Gameplay will consist of 
+top-down action/stealth gameplay.
+
+The main character will move through locations, avoiding or neutralizing guards,
+pressing switches, disabling alarms and security, gathering items, and accessing
+computer systems.
+
+The navigator will have a similar gameplay style, but all action will take place 
+in cyberspace. The navigator will facilitate entry into these locations. They will 
+be tasked with similar objectives: avoiding/neutralizing/repurposing programs,
+modifying realworld and cyberspace security, collecting items and information,
+and accessing servers and datastores.
+
+The actual cool part about the game is the interplay between the two characters.
+Getting through the levels will require switching back and forth between characters 
+so that pathways can be opened up. As additional software is aquired, it expands on 
+the capabilities of the navigator. Software will be aquired in the realworld and in 
+cyberspace. Hardware must be aquired in the real world, although it may be unlocked 
+by actions in cyberspace.
+
+
+
+
+Ideas
+---
+A navigator should be called a daemon
