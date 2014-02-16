@@ -1,0 +1,2 @@
+
+For this project I will be using Python 3.3, and pygame 1.9.2a.

@@ -1,17 +1,18 @@
 
 Digital Heist Design Document
+---
 
 Digital Heist (real title pending), is a puzzle action game taking place in 
 the cyberpunk future. The main character attempts to pull of heists with the 
-help of his/her cyber navigator (need a better name). Gameplay will consist of 
+help of his/her cyber daemon (need a better name). Gameplay will consist of 
 top-down action/stealth gameplay.
 
 The main character will move through locations, avoiding or neutralizing guards,
 pressing switches, disabling alarms and security, gathering items, and accessing
 computer systems.
 
-The navigator will have a similar gameplay style, but all action will take place 
-in cyberspace. The navigator will facilitate entry into these locations. They will 
+The daemon will have a similar gameplay style, but all action will take place 
+in cyberspace. The daemon will facilitate entry into these locations. They will 
 be tasked with similar objectives: avoiding/neutralizing/repurposing programs,
 modifying realworld and cyberspace security, collecting items and information,
 and accessing servers and datastores.
@@ -19,13 +20,60 @@ and accessing servers and datastores.
 The actual cool part about the game is the interplay between the two characters.
 Getting through the levels will require switching back and forth between characters 
 so that pathways can be opened up. As additional software is aquired, it expands on 
-the capabilities of the navigator. Software will be aquired in the realworld and in 
+the capabilities of the daemon. Software will be aquired in the realworld and in 
 cyberspace. Hardware must be aquired in the real world, although it may be unlocked 
 by actions in cyberspace.
 
 
-
-
-Ideas
+Upgrades - Daemon
 ---
-A navigator should be called a daemon
+stealth
+stun programs
+posess programs (dishonored style, for stealthy movement)
+varying levels of icebreakers (for breaking into fortified locations)
+blink (instant movement to a point)
+speed boost
+program disguise
+program repurposing
+advanced combat capabilities
+	gun
+	spread gun
+	temporary charm/dominate
+	melee weapons
+
+	
+
+Upgrades - Human
+---
+stealth
+grace period if seen
+stun gun
+infrared - remote hacking (line of sight to terminals)
+weapons
+	hand to hand
+	pistol (detective special?)
+	shotgun
+	electric kris knife
+grapling hook
+pickpocket
+scanning/xray vision to see into other rooms
+lockpick for old-school locks
+physical disguise
+
+
+
+
+
+
+Progression in Missions
+---
+
+1) Basic stealth heist with no tools. No daemon, no weapons. Challenge will consist 
+mainly of stealth, and finding switches. Mission will culminate in getting the daemon.
+
+2) Introduction to using the daemon. Intoduces player to computer terminals. Daemon 
+movement and stealth. Focus on opening pathways for human with daemon and vice versa.
+
+3) Pickpocket mechanic and hand to hand combat
+
+
