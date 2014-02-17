@@ -58,10 +58,10 @@ as a reference to the dict.
 import pygame
 import glob
 import os
-import warnings
+import logging
 
 if not pygame.image.get_extended():
-    warnings.warn("Pygame will to be unable to load complex image formats.")
+    logging.warning("Pygame will to be unable to load complex image formats.")
 
     
 # the 'singleton' image dict
@@ -163,10 +163,10 @@ def __get_dir_dict(d):
         ext = f.split('.')[-1]
         if ext.lower() in ('jpg', 'jpeg', 'png', 'gif', 'bmp'):
             image_path = os.path.join(parent, f)
-            print("loading", image_path)
+            logging.debug("loading: " + image_path)
             listing[''.join(f.split('.')[0:-1])] = pygame.image.load(image_path)
     for d in dirs:
-        listing[d] = get_dir_dict(os.path.join(parent, d))
+        listing[d] = __get_dir_dict(os.path.join(parent, d))
  
     return listing
 

@@ -2,6 +2,12 @@
 __pycache__/
 *.py[cod]
 
+
+
+data_location.txt
+
+
+
 # C extensions
 *.so
 
