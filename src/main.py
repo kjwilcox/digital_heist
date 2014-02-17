@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
 import logging
-import exhibition
 import os
+
+import exhibition
+import engine
 
 logging.basicConfig(level=logging.DEBUG)
 log = logging.getLogger(__name__)
@@ -22,8 +24,9 @@ except:
 
 
 def main():
-    print("test loading images")
     exhibition.images(IMAGE_DIR)
+    game = engine.Engine()
+    game.run()
     
 
 

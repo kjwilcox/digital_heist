@@ -1,4 +1,5 @@
-#
+#!/usr/bin/python3
+
 # Copyright (c) 2008 Kyle J. Wilcox
 # 
 # Permission is hereby granted, free of charge, to any person
