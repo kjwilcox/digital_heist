@@ -25,6 +25,24 @@ cyberspace. Hardware must be aquired in the real world, although it may be unloc
 by actions in cyberspace.
 
 
+
+Creative influences
+---
+William Gibson
+	Neuromancer
+	Count Zero
+	
+Neil Stephenson
+	Snow Crash
+	
+Tron
+
+Megaman Battle Network
+
+Blade Runner
+
+
+
 Upgrades - Daemon
 ---
 stealth
@@ -74,6 +92,8 @@ mainly of stealth, and finding switches. Mission will culminate in getting the d
 2) Introduction to using the daemon. Intoduces player to computer terminals. Daemon 
 movement and stealth. Focus on opening pathways for human with daemon and vice versa.
 
-3) Pickpocket mechanic and hand to hand combat
+3) Pickpocket mechanic and hand to hand combat.
+
+4) Deamon combat, stun, and interaction with programs
 
 
