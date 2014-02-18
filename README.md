@@ -8,9 +8,6 @@ I will be attempting to actually finish a game. I plan on creating
 the art and music assets myself, but I certainly would welcome help
 on this front.
 
-If anyone has any better ideas for hosting the data assets for the
-game, let me know. I have read that is it is inadvisable to store any amount of binary data in a git repository
-
 
 This game has the following dependencies:
 
