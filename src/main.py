@@ -9,23 +9,13 @@ import engine
 logging.basicConfig(level=logging.DEBUG)
 log = logging.getLogger(__name__)
 
-DATA_DIR = ""
-IMAGE_DIR = ""
-
-try:
-    data_location = open("../data_location.txt").read(2048).strip()
-    if data_location:
-        DATA_DIR = data_location
-        log.info("Reading data files from " + data_location)
-        IMAGE_DIR = os.path.join(data_location, "images")
-except:
-    pass
-    
+DATA_DIR = os.path.join("..", "data")
+log.info("Reading data files from: {}".format(DATA_DIR))
 
 
 
 def main():
-    exhibition.images(IMAGE_DIR)
+    exhibition.images(os.path.join(DATA_DIR, "images"))
     game = engine.Engine()
     game.load_map(os.path.join(DATA_DIR, "maps", "map1.txt"))
     game.run()

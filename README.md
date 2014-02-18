@@ -3,20 +3,19 @@ digital_heist
 
 A game about physical and digital heists in a cyberpunk setting.
 
+The purpose of this game is to showcase my programming abilities.
+I will be attempting to actually finish a game. I plan on creating
+the art and music assets myself, but I certainly would welcome help
+on this front.
 
-To run the game, you must obtain a copy of the game's data,
-which is not contained in this git repository. I am currently
-hosting it in the following dropbox:
+If anyone has any better ideas for hosting the data assets for the
+game, let me know. I have read that is it is inadvisable to store any amount of binary data in a git repository
 
-https://www.dropbox.com/sh/d43z63j86mwh59y/mjOOHesvyB
 
-The easiest method is to download this folder as a zip file,
-and extract the digital_heist_data folder somewhere on your machine.
+This game has the following dependencies:
 
-Create a file in the root directory of the github repository (same
-directory as this readme) called "data_location.txt", and put the
-complete file path to the data folder inside.
+* Python 3.3
+* PyGame 1.9.2a
 
-Once this file is in place, you can play the game by running:
-
-main.py
+You can play the game by running:
+    main.py
