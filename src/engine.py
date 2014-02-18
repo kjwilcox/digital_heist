@@ -1,8 +1,12 @@
 #!/usr/bin/python3
 
-import pygame
 
+import exhibition
 import map
+
+import pygame
+import logging
+log = logging.getLogger(__name__)
 
 class Engine:
     
@@ -10,6 +14,7 @@ class Engine:
         self.map = None
         pygame.init()
         screen = pygame.display.set_mode((32*2*16,32*2*9))
+        exhibition.optimize()
         
         
     def load_map(self, filename):
