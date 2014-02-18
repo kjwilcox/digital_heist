@@ -2,6 +2,7 @@
 
 
 create graphics
+    Pickle Editor program for pixel art? $25
     player
     daemon
     programs
@@ -9,51 +10,33 @@ create graphics
     map tiles
 
 
-engine work
-    create game loop
-    render something on screen
-    fix up image loading to work for other people
-
+tune game loop to run at a fixed time step
+    add variable speed rendering
+    add rendering interpolation
     
 
 map work 
-    design basic map format
-
-    get map rendering
-
-    write map loader
+    create a more advanced map format that can handle more advanced data
     
 player
-
     get player rendering
-
     get player moving with keyboard
-    
     controller support 
 
 get NPCs in the game
-
     basic movement for AI
-    
     add movement pattern support (guard on patrol)
-
     add guard psychology (state machine for suspisious/alert)
-    
     add guard sight and triggers
-    
     add guard communications (radio, etc)
-    
     add guard interactions (alarms, switches)
-    
     add guard weapons
     
 
 make interactable objects
-
     get switches working
-    
     get doors working
-    
     get alarms working
-    
     get switching to daemon working
+
+
