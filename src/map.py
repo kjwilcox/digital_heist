@@ -6,7 +6,7 @@ import pygame
 import logging
 log = logging.getLogger(__name__)
 
-TILE_SIZE = 32
+TILE_SIZE = 64
 
 class Map:
     

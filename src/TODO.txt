@@ -21,6 +21,8 @@ map work
 player
     get player rendering
     get player moving with keyboard
+    player collision with walls
+    player collisions with arbitrary objects
     controller support 
 
 get NPCs in the game
