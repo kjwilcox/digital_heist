@@ -17,7 +17,7 @@ log.info("Reading data files from: {}".format(DATA_DIR))
 def main():
     exhibition.images(os.path.join(DATA_DIR, "images"))
     game = engine.Engine()
-    game.load_map(os.path.join(DATA_DIR, "maps", "map1.txt"))
+    game.load_level(os.path.join(DATA_DIR, "levels", "level1.txt"))
     game.run()
     
 

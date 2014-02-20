@@ -8,14 +8,14 @@ log = logging.getLogger(__name__)
 
 TILE_SIZE = 64
 
-class Map:
+class Level:
     
-    def __init__(self, map_filename):
+    def __init__(self, level_filename):
         self.cell = {}
         self.tile = {}
-        log.info("loading map from: " + map_filename)
+        log.info("loading level from: " + level_filename)
         
-        with open(map_filename, encoding="utf8") as f:
+        with open(level_filename, encoding="utf8") as f:
             dimensions = f.readline().strip().split()
             self.width, self.height = int(dimensions[0]), int(dimensions[1])
             log.debug("height: {}, width: {}".format(self.height, self.width))
@@ -30,7 +30,7 @@ class Map:
                 for x, cell in enumerate(line.strip().split()):
                     self.cell[x][y] = int(cell)
                     
-            log.debug(self.cell)
+            #log.debug(self.cell)
         
         self.tile[0] = exhibition.images()["floor"]
         self.tile[1] = exhibition.images()["wall"]
