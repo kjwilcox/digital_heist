@@ -2,6 +2,7 @@
 
 
 create graphics
+    fix transparency
     Pickle Editor program for pixel art? $25
     player
     daemon

@@ -9,30 +9,31 @@ import inputdevice
 class Player:
     
     def __init__(self):
-        self.pos = pygame.Rect((0,0),(32,32))
+        self.pos = collections.namedtuple('position', ['x', 'y'])
+        self.pos.x, self.pos.y = 0.0, 0.0
         self.image = exhibition.images()["player"]
         self.vel = collections.namedtuple('Vector', ['x', 'y'])
-        self.move_speed = 4
+        self.move_speed = 4.0
         
     def render(self):
         screen = pygame.display.get_surface()
-        screen.blit(self.image, self.pos)
+        screen.blit(self.image, (int(self.pos.x), int(self.pos.y)))
         
     def process_input(self, i):
-        self.vel.x = 0
-        self.vel.y = 0
+        self.vel.x, self.vel.y = 0.0, 0.0
+
         if i.up:
-            self.vel.y -= 1
+            self.vel.y -= self.move_speed
         if i.down:
-            self.vel.y += 1
+            self.vel.y += self.move_speed
         if i.left:
-            self.vel.x -= 1
+            self.vel.x -= self.move_speed
         if i.right:
-            self.vel.x += 1
+            self.vel.x += self.move_speed
     
     def update(self):
-        self.pos.x += self.vel.x * self.move_speed
-        self.pos.y += self.vel.y * self.move_speed
+        self.pos.x += self.vel.x
+        self.pos.y += self.vel.y
         screen = pygame.display.get_surface()
         #screen.get_rect().clamp_ip(self.pos)
         
