@@ -2,7 +2,7 @@
 
 
 import exhibition
-import level
+import map
 import player
 import inputdevice
 
@@ -13,7 +13,7 @@ log = logging.getLogger(__name__)
 class Engine:
     
     def __init__(self):
-        self.level = None
+        self.map = None
         self.player = player.Player()
         self.input = inputdevice.KeyboardInput()
         pygame.init()
@@ -21,8 +21,8 @@ class Engine:
         exhibition.optimize()
         
         
-    def load_level(self, filename):
-        self.level = level.Level(filename)
+    def load_map(self, filename):
+        self.map = map.Map(filename)
         
     
     def run(self):
@@ -44,8 +44,8 @@ class Engine:
             
             
                 
-            if self.level:
-                self.level.render()
+            if self.map:
+                self.map.render()
                 
             if self.player:
                 self.player.render()
