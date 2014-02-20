@@ -18,9 +18,12 @@ tune game loop to run at a fixed time step
 map work 
     create a more advanced map format that can handle more advanced data
     
+    
+rendering
+    have a camera and support scrolling across the maps
+    
 player
-    get player rendering
-    get player moving with keyboard
+
     player collision with walls
     player collisions with arbitrary objects
     controller support 
