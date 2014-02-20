@@ -3,6 +3,7 @@
 
 import exhibition
 import map
+import player
 
 import pygame
 import logging
@@ -12,6 +13,7 @@ class Engine:
     
     def __init__(self):
         self.map = None
+        self.player = player.Player()
         pygame.init()
         screen = pygame.display.set_mode((32*2*16,32*2*9))
         exhibition.optimize()
@@ -22,6 +24,9 @@ class Engine:
         
     
     def run(self):
+        
+        
+        
         self.main_loop()
         pygame.quit()
     
@@ -34,6 +39,10 @@ class Engine:
                 
             if self.map:
                 self.map.render()
+                
+            if self.player:
+                self.player.render()
+            
             pygame.display.flip()
             pygame.time.wait(50) # 20 fps
 
