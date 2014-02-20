@@ -6,6 +6,8 @@ import map
 import player
 import inputdevice
 
+import level1
+
 import pygame
 import logging
 log = logging.getLogger(__name__)
@@ -13,16 +15,12 @@ log = logging.getLogger(__name__)
 class Engine:
     
     def __init__(self):
-        self.map = None
-        self.player = player.Player()
-        self.input = inputdevice.KeyboardInput()
         pygame.init()
-        screen = pygame.display.set_mode((32*2*16,32*2*9))
+        self.screen = pygame.display.set_mode((32*2*16,32*2*9))
         exhibition.optimize()
         
-        
-    def load_map(self, filename):
-        self.map = map.Map(filename)
+        self.level = level1.Level1()
+        self.input = inputdevice.KeyboardInput()
         
     
     def run(self):
@@ -38,17 +36,11 @@ class Engine:
             
             # game update
             self.input.update()
-            self.player.process_input(self.input)
             
-            self.player.update()
+            self.level.process_input(self.input)
+            self.level.update()
             
-            
-                
-            if self.map:
-                self.map.render()
-                
-            if self.player:
-                self.player.render()
+            self.level.render()
             
             pygame.display.flip()
             pygame.time.wait(16) # 20 fps

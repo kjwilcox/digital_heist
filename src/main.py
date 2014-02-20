@@ -5,19 +5,15 @@ import os
 
 import exhibition
 import engine
+import data
 
 logging.basicConfig(level=logging.DEBUG)
 log = logging.getLogger(__name__)
 
-DATA_DIR = os.path.join("..", "data")
-log.info("Reading data files from: {}".format(DATA_DIR))
-
-
 
 def main():
-    exhibition.images(os.path.join(DATA_DIR, "images"))
+    exhibition.images(os.path.join(data.DATA_DIR, "images"))
     game = engine.Engine()
-    game.load_map(os.path.join(DATA_DIR, "maps", "map1.txt"))
     game.run()
     
 

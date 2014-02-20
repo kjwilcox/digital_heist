@@ -30,14 +30,13 @@ class Map:
                 for x, cell in enumerate(line.strip().split()):
                     self.cell[x][y] = int(cell)
                     
-            log.debug(self.cell)
         
         self.tile[0] = exhibition.images()["floor"]
         self.tile[1] = exhibition.images()["wall"]
                     
                     
 
-    def render(self):
+    def render(self, camera):
         
         screen = pygame.display.get_surface()
         
