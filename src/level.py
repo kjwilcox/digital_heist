@@ -10,7 +10,9 @@ class Level:
 
     def update(self):
         self.playerA.update()
+        self.cameraA.update()
         
     def render(self):
         self.mapA.render(self.cameraA)
         self.playerA.render(self.cameraA)
+        self.cameraA.test_render()

@@ -5,14 +5,17 @@ import collections
 
 import exhibition
 import inputdevice
+from data import PLAYER_SIZE
 
 class Player:
     
     def __init__(self, starting_position):
         self.pos = collections.namedtuple('position', ['x', 'y'])
         self.pos.x, self.pos.y = starting_position
+        self.rect = pygame.Rect(starting_position, (PLAYER_SIZE, PLAYER_SIZE))
         self.image = exhibition.images()["player"]
         self.vel = collections.namedtuple('Vector', ['x', 'y'])
+        self.vel.x, self.vel.y = 0.0, 0.0
         self.move_speed = 4.0
         
     def process_input(self, i):
@@ -30,8 +33,8 @@ class Player:
     def update(self):
         self.pos.x += self.vel.x
         self.pos.y += self.vel.y
-        screen = pygame.display.get_surface()
-        #screen.get_rect().clamp_ip(self.pos)
+        
+        self.rect = pygame.Rect(int(self.pos.x), int(self.pos.y), PLAYER_SIZE, PLAYER_SIZE)
         
         
     def render(self, camera):

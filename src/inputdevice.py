@@ -28,5 +28,5 @@ class KeyboardInput(InputDevice):
         self.A = True if (keys[pygame.K_SPACE] or keys[pygame.K_z]) else False
         self.B = True if (keys[pygame.K_LCTRL] or keys[pygame.K_x]) else False
         self.start = True if keys[pygame.K_RETURN] else False
-        self.select = True if keys[pygame.K_ESCAPE] else False
+        self.select = True if keys[pygame.K_BACKSPACE] else False
         

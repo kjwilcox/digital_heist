@@ -6,7 +6,7 @@ import pygame
 import logging
 log = logging.getLogger(__name__)
 
-TILE_SIZE = 64
+from data import TILE_SIZE
 
 class Map:
     
@@ -29,6 +29,8 @@ class Map:
                 
                 for x, cell in enumerate(line.strip().split()):
                     self.cell[x][y] = int(cell)
+                    
+            self.bounds = pygame.Rect(0,0, self.width * TILE_SIZE, self.height * TILE_SIZE)
                     
         
         self.tile[0] = exhibition.images()["floor"]

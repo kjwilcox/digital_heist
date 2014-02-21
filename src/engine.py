@@ -33,6 +33,10 @@ class Engine:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     return
+                
+                if event.type == pygame.KEYUP:
+                    if event.key == pygame.K_ESCAPE:
+                        return
             
             # game update
             self.input.update()
