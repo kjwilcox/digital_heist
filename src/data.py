@@ -12,3 +12,5 @@ log.info("Tile size: {}".format(TILE_SIZE))
 
 PLAYER_SIZE = 32
 log.info("Player size: {}".format(PLAYER_SIZE))
+
+SCREEN_RESOLUTION = (32*16, 32*9)

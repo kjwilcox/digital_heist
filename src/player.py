@@ -5,7 +5,7 @@ import collections
 
 import exhibition
 import inputdevice
-from data import PLAYER_SIZE
+from data import PLAYER_SIZE, TILE_SIZE
 
 class Player:
     
@@ -39,5 +39,8 @@ class Player:
         
     def render(self, camera):
         screen = pygame.display.get_surface()
+        offset_x = camera.rect.left % TILE_SIZE
+        offset_y = camera.rect.top % TILE_SIZE
+        
         screen.blit(self.image, (int(self.pos.x), int(self.pos.y)))
         

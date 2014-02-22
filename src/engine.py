@@ -5,6 +5,7 @@ import exhibition
 import map
 import player
 import inputdevice
+import data
 
 import level1
 
@@ -16,7 +17,9 @@ class Engine:
     
     def __init__(self):
         pygame.init()
-        self.screen = pygame.display.set_mode((32*2*16,32*2*9))
+        log.info("Initializing display surface at {}x{}".format(
+            data.SCREEN_RESOLUTION[0], data.SCREEN_RESOLUTION[1]))
+        self.screen = pygame.display.set_mode(data.SCREEN_RESOLUTION)
         exhibition.optimize()
         
         self.level = level1.Level1()
@@ -44,6 +47,7 @@ class Engine:
             self.level.process_input(self.input)
             self.level.update()
             
+            pygame.display.get_surface().fill((0,0,0))
             self.level.render()
             
             pygame.display.flip()

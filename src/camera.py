@@ -9,7 +9,7 @@ class Camera:
     def __init__(self, player, _map):
         self.player = player
         self.map = _map
-        self.rect = pygame.Rect(0,0,128,128)
+        self.rect = pygame.Rect(pygame.display.get_surface().get_rect())
         
     def update(self):
         self.rect.center = self.player.rect.center

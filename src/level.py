@@ -15,4 +15,4 @@ class Level:
     def render(self):
         self.mapA.render(self.cameraA)
         self.playerA.render(self.cameraA)
-        self.cameraA.test_render()
+        #self.cameraA.test_render()

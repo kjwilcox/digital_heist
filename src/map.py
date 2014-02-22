@@ -31,6 +31,7 @@ class Map:
                     self.cell[x][y] = int(cell)
                     
             self.bounds = pygame.Rect(0,0, self.width * TILE_SIZE, self.height * TILE_SIZE)
+            log.debug("bounds: {}, {}".format(self.bounds.right, self.bounds.bottom))
                     
         
         self.tile[0] = exhibition.images()["floor"]
@@ -42,8 +43,37 @@ class Map:
         
         screen = pygame.display.get_surface()
         
-        for y in range(self.height):
-            for x in range(self.width):
+        camX = camera.rect.left
+        camY = camera.rect.top
+        
+        """
+        0 -> 0
+        31 -> 0
+        32 -> 1
+        33 -> 1
+        """
+        
+        
+        start_x = camX // TILE_SIZE
+        start_y = camY // TILE_SIZE
+        
+        offset_x = camX % TILE_SIZE
+        offset_y = camY % TILE_SIZE
+        
+        end_x = camera.rect.right // TILE_SIZE
+        end_y = camera.rect.bottom // TILE_SIZE
+        
+        
+        for y in range(start_y, end_y + 1):
+            for x in range(start_x, end_x + 1):
+                #log.debug("<{},{}> at ({},{}) offset [{},{}]".format(
+                #    x, y, x * TILE_SIZE - offset_x, y * TILE_SIZE - offset_y, offset_x, offset_y))
                 screen.blit(self.tile[self.cell[x][y]],
-                            (x*TILE_SIZE, y*TILE_SIZE))
+                            (x * TILE_SIZE - offset_x,
+                             y * TILE_SIZE - offset_y))
+
+
+
+
+
 
