@@ -21,5 +21,8 @@ class Camera:
                   self.rect.bottomright, self.rect.bottomleft]
         pygame.draw.lines(screen, (255,0,255), True, points)
         
-        
+    def world_to_screen(self, coords):
+        """ Converts world-space coordinates to screen-space coordinates based on the camera. """
+        x, y = coords
+        return (x - self.rect.x, y - self.rect.y)
     

@@ -36,6 +36,7 @@ class Map:
         
         self.tile[0] = exhibition.images()["floor"]
         self.tile[1] = exhibition.images()["wall"]
+        self.tile[-1] = exhibition.images()["missing"]
                     
                     
 
@@ -43,34 +44,23 @@ class Map:
         
         screen = pygame.display.get_surface()
         
-        camX = camera.rect.left
-        camY = camera.rect.top
-        
-        """
-        0 -> 0
-        31 -> 0
-        32 -> 1
-        33 -> 1
-        """
-        
-        
-        start_x = camX // TILE_SIZE
-        start_y = camY // TILE_SIZE
-        
-        offset_x = camX % TILE_SIZE
-        offset_y = camY % TILE_SIZE
+        start_x = camera.rect.left // TILE_SIZE
+        start_y = camera.rect.top // TILE_SIZE
         
         end_x = camera.rect.right // TILE_SIZE
         end_y = camera.rect.bottom // TILE_SIZE
         
         
-        for y in range(start_y, end_y + 1):
-            for x in range(start_x, end_x + 1):
-                #log.debug("<{},{}> at ({},{}) offset [{},{}]".format(
-                #    x, y, x * TILE_SIZE - offset_x, y * TILE_SIZE - offset_y, offset_x, offset_y))
-                screen.blit(self.tile[self.cell[x][y]],
-                            (x * TILE_SIZE - offset_x,
-                             y * TILE_SIZE - offset_y))
+        for y in range(start_y, min(end_y + 1, self.height)):
+            for x in range(start_x, min(end_x + 1, self.width)):
+                
+                try:
+                    image = self.tile[self.cell[x][y]]
+                except:
+                    log.error("tried to render non-existant tile ({}, {})".format(x, y))
+                    image = self.tile[-1]
+                
+                screen.blit(image, camera.world_to_screen((x*TILE_SIZE, y* TILE_SIZE)))
 
 
 

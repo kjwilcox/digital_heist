@@ -39,8 +39,6 @@ class Player:
         
     def render(self, camera):
         screen = pygame.display.get_surface()
-        offset_x = camera.rect.left % TILE_SIZE
-        offset_y = camera.rect.top % TILE_SIZE
         
-        screen.blit(self.image, (int(self.pos.x), int(self.pos.y)))
+        screen.blit(self.image, camera.world_to_screen((int(self.pos.x), int(self.pos.y))))
         
