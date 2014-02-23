@@ -20,13 +20,11 @@ map work
     create a more advanced map format that can handle more advanced data
     
     
-rendering
-    have a camera and support scrolling across the maps
-    
 player
 
     player collision with walls
     player collisions with arbitrary objects
+    restrict movement to one axis
     controller support 
 
 get NPCs in the game
