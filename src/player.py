@@ -5,6 +5,7 @@ import collections
 
 import exhibition
 import inputdevice
+from direction import Direction
 from data import PLAYER_SIZE, TILE_SIZE
 
 class Player:
@@ -14,21 +15,36 @@ class Player:
         self.pos.x, self.pos.y = starting_position
         self.rect = pygame.Rect(starting_position, (PLAYER_SIZE, PLAYER_SIZE))
         self.image = exhibition.images()["player"]
-        self.vel = collections.namedtuple('Vector', ['x', 'y'])
+        self.vel = collections.namedtuple('vector', ['x', 'y'])
+        self.dir = None
         self.vel.x, self.vel.y = 0.0, 0.0
         self.move_speed = 4.0
         
     def process_input(self, i):
         self.vel.x, self.vel.y = 0.0, 0.0
 
-        if i.up:
+        d = self.dir
+        if d in (Direction.UP, None) and i.up:
             self.vel.y -= self.move_speed
-        if i.down:
+            self.dir = Direction.UP
+            return
+        
+        if d in (Direction.DOWN, None) and i.down:
             self.vel.y += self.move_speed
-        if i.left:
+            self.dir = Direction.DOWN
+            return
+        
+        if d in (Direction.LEFT, None) and i.left:
             self.vel.x -= self.move_speed
-        if i.right:
+            self.dir = Direction.LEFT
+            return
+        
+        if d in (Direction.RIGHT, None) and i.right:
             self.vel.x += self.move_speed
+            self.dir = Direction.RIGHT
+            return
+        
+        self.dir = None
     
     def update(self):
         self.pos.x += self.vel.x

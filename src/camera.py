@@ -15,12 +15,6 @@ class Camera:
         self.rect.center = self.player.rect.center
         self.rect.clamp_ip(self.map.bounds)
         
-    def test_render(self):
-        screen = screen = pygame.display.get_surface()
-        points = [self.rect.topleft, self.rect.topright,
-                  self.rect.bottomright, self.rect.bottomleft]
-        pygame.draw.lines(screen, (255,0,255), True, points)
-        
     def world_to_screen(self, coords):
         """ Converts world-space coordinates to screen-space coordinates based on the camera. """
         x, y = coords
