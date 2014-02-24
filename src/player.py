@@ -49,8 +49,39 @@ class Player:
     def update(self):
         self.pos.x += self.vel.x
         self.pos.y += self.vel.y
-        
         self.rect = pygame.Rect(int(self.pos.x), int(self.pos.y), PLAYER_SIZE, PLAYER_SIZE)
+    
+    
+    def collision_detection(self):
+        # calculate which tiles the player might be touching
+        
+        # test collision with said tiles
+        
+        for tile in self.get_potential_collision_tiles():
+            pass
+        
+        
+    
+    
+    def get_potential_collision_tiles(self):
+        xq, xr = divmod(self.rect.top, TILE_SIZE)
+        yq, yr = divmod(self.rect.left, TILE_SIZE)
+        
+        x_start = xq
+        x_end = xq + 1
+        if (xr > PLAYER_SIZE):
+            x_end += 1
+        
+        y_start = yq
+        y_end = yq + 1
+        if (yr > PLAYER_SIZE):
+            y_end += 1
+            
+        for x in range(x_start, x_end):
+            for y in range(y_start, y_end):
+                yield (x, y)
+            
+    
         
         
     def render(self, camera):
