@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-class Direction:
-    UP, DOWN, LEFT, RIGHT = range(4)
+UP, DOWN, LEFT, RIGHT = range(4)
     
     

@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import physics
 
 class Level:
     def __init__(self):
@@ -10,6 +11,9 @@ class Level:
 
     def update(self):
         self.playerA.update()
+        
+        physics.PlayerWallPhysics.update(self.mapA, self.playerA)
+        
         self.cameraA.update()
         
     def render(self):

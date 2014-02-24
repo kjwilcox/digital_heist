@@ -21,8 +21,6 @@ map work
     
     
 player
-
-    player collision with walls
     player collisions with arbitrary objects
     controller support 
 
