@@ -11,7 +11,7 @@ class PlayerWallPhysics:
     def update(map, player):
         for tile_coords in PlayerWallPhysics.get_potential_collision_tiles(player):
             x, y = tile_coords
-            t = map.tile[x][y]
+            t = map.tile[x, y]
             if t.collision_rect and player.rect.colliderect(t.collision_rect):
                 PlayerWallPhysics.handle_collision(player, t)
     

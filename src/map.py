@@ -19,10 +19,6 @@ class Map:
             dimensions = f.readline().strip().split()
             self.width, self.height = int(dimensions[0]), int(dimensions[1])
             log.debug("height: {}, width: {}".format(self.height, self.width))
-            
-            for i in range(self.width):
-                self.tile[i] = {}
-                
 
             for y, line in enumerate(f):
                 log.debug("{}".format(line.strip()))
@@ -30,7 +26,7 @@ class Map:
                 for x, cell in enumerate(line.strip().split()):
                     tile_num = int(cell)
                     tile_type = tile.tile_mapping[tile_num]
-                    self.tile[x][y] = tile_type((x, y))
+                    self.tile[x, y] = tile_type((x, y))
                     
             self.bounds = pygame.Rect(0,0, self.width * TILE_SIZE, self.height * TILE_SIZE)
             log.debug("bounds: {}, {}".format(self.bounds.right, self.bounds.bottom))
@@ -51,7 +47,7 @@ class Map:
             for x in range(start_x, min(end_x + 1, self.width)):
                 
                 try:
-                    t = self.tile[x][y]
+                    t = self.tile[x, y]
                     t.render(camera)
                     
                 except:
