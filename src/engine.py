@@ -32,6 +32,8 @@ class Engine:
     
     def main_loop(self):
         
+        clock = pygame.time.Clock()
+        
         while 1:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -47,10 +49,10 @@ class Engine:
             self.level.process_input(self.input)
             self.level.update()
             
-            pygame.display.get_surface().fill((0,0,0))
             self.level.render()
             
             pygame.display.flip()
-            pygame.time.wait(16) # 20 fps
+            ms = clock.tick(60)
+            #log.debug("{}ms".format(ms))
 
 

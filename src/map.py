@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import exhibition
+import tile
 
 import pygame
 import logging
@@ -11,7 +12,6 @@ from data import TILE_SIZE
 class Map:
     
     def __init__(self, map_filename):
-        self.cell = {}
         self.tile = {}
         log.info("loading map from: " + map_filename)
         
@@ -21,24 +21,20 @@ class Map:
             log.debug("height: {}, width: {}".format(self.height, self.width))
             
             for i in range(self.width):
-                self.cell[i] = {}
+                self.tile[i] = {}
                 
 
             for y, line in enumerate(f):
                 log.debug("{}".format(line.strip()))
                 
                 for x, cell in enumerate(line.strip().split()):
-                    self.cell[x][y] = int(cell)
+                    tile_num = int(cell)
+                    tile_type = tile.tile_mapping[tile_num]
+                    self.tile[x][y] = tile_type((x, y))
                     
             self.bounds = pygame.Rect(0,0, self.width * TILE_SIZE, self.height * TILE_SIZE)
             log.debug("bounds: {}, {}".format(self.bounds.right, self.bounds.bottom))
-                    
-        
-        self.tile[0] = exhibition.images()["floor"]
-        self.tile[1] = exhibition.images()["wall"]
-        self.tile[-1] = exhibition.images()["missing"]
-                    
-                    
+            
 
     def render(self, camera):
         
@@ -55,12 +51,14 @@ class Map:
             for x in range(start_x, min(end_x + 1, self.width)):
                 
                 try:
-                    image = self.tile[self.cell[x][y]]
+                    t = self.tile[x][y]
+                    t.render(camera)
+                    
                 except:
                     log.error("tried to render non-existant tile ({}, {})".format(x, y))
-                    image = self.tile[-1]
+                    continue
                 
-                screen.blit(image, camera.world_to_screen((x*TILE_SIZE, y* TILE_SIZE)))
+                
 
 
 
