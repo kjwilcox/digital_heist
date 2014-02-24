@@ -24,7 +24,6 @@ player
 
     player collision with walls
     player collisions with arbitrary objects
-    restrict movement to one axis
     controller support 
 
 get NPCs in the game
