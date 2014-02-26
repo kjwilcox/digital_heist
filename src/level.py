@@ -2,20 +2,17 @@
 
 import physics
 
+""" Contains 1 or more area. """
 class Level:
     def __init__(self):
-        pass
+        self.areas = {}
+        self.area = None
     
     def process_input(self, _input):
-        self.playerA.process_input(_input)
+        self.area.player.process_input(_input)
 
     def update(self):
-        self.playerA.update()
-        
-        physics.PlayerWallPhysics.update(self.mapA, self.playerA)
-        
-        self.cameraA.update()
+        self.area.update()
         
     def render(self):
-        self.mapA.render(self.cameraA)
-        self.playerA.render(self.cameraA)
+        self.area.render()
