@@ -9,17 +9,28 @@ import data
 
 import level1
 
+import os
 import pygame
 import logging
 log = logging.getLogger(__name__)
 
+
 class Engine:
+    """ Main class responsible for running the game.
+        Controls game setup and runs the main loop.
+        Passes input to game and handles the event queue. """
+    
     
     def __init__(self):
+        """ Creates the display surface and loads the game assets. """
+        
         pygame.init()
         log.info("Initializing display surface at {}x{}".format(
             data.SCREEN_RESOLUTION[0], data.SCREEN_RESOLUTION[1]))
         self.screen = pygame.display.set_mode(data.SCREEN_RESOLUTION)
+        
+        # load image resources
+        exhibition.images(os.path.join(data.DATA_DIR, "images"))
         exhibition.optimize()
         
         self.level = level1.Level1()
@@ -27,8 +38,11 @@ class Engine:
         
     
     def run(self):
+        """ Starts the game and runs the main game loop. """
+        
         self.main_loop()
         pygame.quit()
+    
     
     def main_loop(self):
         

@@ -9,9 +9,15 @@ log = logging.getLogger(__name__)
 
 from data import TILE_SIZE
 
+
 class Map:
+    """ The map class represents one map in the game.
+        A map is made up of tiles, some of which may have collision properties. """
+    
     
     def __init__(self, map_filename):
+        """ Loads a map fro mthe specified map file. """
+        
         self.tile = {}
         log.info("loading map from: " + map_filename)
         
@@ -30,9 +36,10 @@ class Map:
                     
             self.bounds = pygame.Rect(0,0, self.width * TILE_SIZE, self.height * TILE_SIZE)
             log.debug("bounds: {}, {}".format(self.bounds.right, self.bounds.bottom))
-            
+    
 
     def render(self, camera):
+        """ Renders the map to the screen. """
         
         screen = pygame.display.get_surface()
         

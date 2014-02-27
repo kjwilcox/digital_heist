@@ -7,16 +7,22 @@ import logging
 log = logging.getLogger(__name__)
 
 class PlayerWallPhysics:
+    """ Static class to handle player vs wall collisions. """
     
-    def update(map, player):
+    
+    def update(_map, player):
+        """ Main function that performs the collision detection and handling.
+            Takes the map and player as arguments"""
         for tile_coords in PlayerWallPhysics.get_potential_collision_tiles(player):
             x, y = tile_coords
-            t = map.tile[x, y]
+            t = _map.tile[x, y]
             if t.collision_rect and player.rect.colliderect(t.collision_rect):
                 PlayerWallPhysics.handle_collision(player, t)
     
     
     def handle_collision(player, tile):
+        """ Adjusts a player's position to be outside of the wall it collided with. """
+        
         if player.dir == None:
             log.error("Player collided with something but wasn't moving")
             return
@@ -34,9 +40,9 @@ class PlayerWallPhysics:
         player.vel.x, player.vel.y = 0.0, 0.0
         player.dir = None
         
-        
     
     def get_potential_collision_tiles(player):
+        """ Generator that returns tiles that the player is in range to collide with. """
         xq, xr = divmod(player.rect.left, TILE_SIZE)
         yq, yr = divmod(player.rect.top, TILE_SIZE)
         
