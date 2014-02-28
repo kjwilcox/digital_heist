@@ -58,10 +58,13 @@ class Map:
                     t.render(camera)
                     
                 except:
-                    log.error("tried to render non-existant tile ({}, {})".format(x, y))
+                    #log.error("tried to render non-existant tile ({}, {})".format(x, y))
                     continue
                 
-                
+    def tile_to_world_coords(coords):
+        x, y = coords
+        return (x * TILE_SIZE, y * TILE_SIZE)
+    
 
 
 

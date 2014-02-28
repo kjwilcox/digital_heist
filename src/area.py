@@ -15,6 +15,7 @@ class Area:
         self.map = _map
         self.player = _player
         self.camera = camera.PlayerCenteredCamera(self.player, self.map)
+        self.interactables = {}
     
     
     def process_input(self, _input):
@@ -36,6 +37,11 @@ class Area:
         """ Renders the map and player using the camera's position. """
         
         self.map.render(self.camera)
+        
+        for k, i in self.interactables.items():
+            i.render(self.camera)
+            
         self.player.render(self.camera)
+        
 
 
