@@ -13,7 +13,9 @@ class Area:
         """ Creates an area with the given player on the given map. """
         
         self.map = _map
+        self.map.area = self
         self.player = _player
+        self.player.area = self
         self.camera = camera.PlayerCenteredCamera(self.player, self.map)
         self.interactables = {}
     

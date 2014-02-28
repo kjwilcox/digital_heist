@@ -9,5 +9,5 @@ class Computer(Interactable):
     def __init__(self, image, location, collision_rect, area):
         super().__init__(image, location, collision_rect, area)
 
-    def interact(self):
+    def interact(self, interacter):
         log.info("Interacted with computer")

@@ -16,8 +16,9 @@ class Map:
     
     
     def __init__(self, map_filename):
-        """ Loads a map fro mthe specified map file. """
+        """ Loads a map from the specified map file. """
         
+        self.area = None
         self.tile = {}
         log.info("loading map from: " + map_filename)
         
