@@ -32,6 +32,7 @@ class Area:
         elif self.state == AreaState.Message:
             self.message.process_input(_input)
 
+
     def update(self):
         """ Updates player, performs collision detection, and updates camera. """
         if self.state == AreaState.Gameplay:
@@ -41,6 +42,7 @@ class Area:
             self.camera.update()
         elif self.state == AreaState.Message:
             pass
+
 
     def render(self):
         """ Renders the map and player using the camera's position. """
@@ -57,15 +59,20 @@ class Area:
         
         
     def display_message(self, msg):
+        """ Pops up a message window and pauses the game. """
+        
         self.state = AreaState.Message
         self.message = message.MessageBox(msg, self)
         
     
     def remove_message(self):
+        """ Removes the message windows and resumes the game. """
+        
         self.message = None
         self.state = AreaState.Gameplay
         
         
 
 class AreaState:
+    """ The states that an area can be in. """
     Gameplay, Paused, Suspended, Message = range(4)

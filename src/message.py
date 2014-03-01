@@ -62,4 +62,5 @@ class MessageBox:
 
         
 class MessageBoxState:
+    """ Message box states. Refers to their logic for waiting on button presses. """
     WaitingForInitialRelease, WaitingForDismissal, WaitingForFinalRelease = range(3)
