@@ -29,6 +29,9 @@ class Player:
         self.vel.x, self.vel.y = 0.0, 0.0
         self.move_speed = 4.0
         self.fix_rect()
+        
+    def __str__(self):
+        return "<Player {}>".format(self.rect.topleft)
 
 
     def process_input(self, i):

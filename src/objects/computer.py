@@ -10,4 +10,6 @@ class Computer(Interactable):
         super().__init__(image, location, collision_rect, area)
 
     def interact(self, interacter):
-        log.info("Interacted with computer")
+        log.info("{} interacted with computer".format(interacter))
+        area = interacter.area
+        area.display_message("Beep boop, this is a computer!")
