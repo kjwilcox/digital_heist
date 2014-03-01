@@ -9,7 +9,14 @@ log = logging.getLogger(__name__)
 
 
 class MessageBox:
+    """
+    A message box appears on the screen, displays text, and pauses the game until it is dismissed.
+    """
+    
+    
     def __init__(self, msg, area):
+        """ Creates a message box with the given message for the given area. """
+        
         self.creation_time = pygame.time.get_ticks()
         self.message = msg
         self.area = area
@@ -27,14 +34,15 @@ class MessageBox:
         self.surf = textrect.render_textrect(self.message, self.font, self.rect, (0,0,0), (255,255,255))
         
         
-        
     def render(self):
-        screen = pygame.display.get_surface()
+        """ Renders the box to the screen. """
         
+        screen = pygame.display.get_surface()
         screen.blit(self.surf, self.rect)
         
     
     def process_input(self, i):
+        """ Handles input for dismissing the screen. """
         
         current_time = pygame.time.get_ticks()
         delta_t = current_time - self.creation_time
@@ -49,6 +57,7 @@ class MessageBox:
             
         if self.state == MessageBoxState.WaitingForFinalRelease and not i.A:
             self.area.remove_message()
+            return
         
 
         

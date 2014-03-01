@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-# this file is used with permission from the pygame code repository
+# this file is used with permission from the pygame code repository.
+# i have updated it to work in python 3
 # http://www.pygame.org/pcr/text_rect/index.php
 # Title: Word-wrapped text display module
 # Author: David Clark (da_clark at shaw.ca)
