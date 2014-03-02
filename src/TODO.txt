@@ -14,17 +14,22 @@ create graphics
 tune game loop to run at a fixed time step
     add variable speed rendering
     add rendering interpolation
-    
 
-map work 
-    create a more advanced map format that can handle more advanced data
-    
+
+gameplay
+    have level complete wait for dialogue to finish
+    make gameplay transition between levels
+    add a title screen
+    add a campaign select
+    add a mission select
+    add a pause screen
+    add an options screen
     
 player
     player collisions with arbitrary objects
     controller support
     player animation
-    reduce hitbox for better looking movement
+
 
 get NPCs in the game
     stationary AI
