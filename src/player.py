@@ -80,7 +80,14 @@ class Player:
         """ Sets rectangle used for rendering and collision to integer coordinates. """
         
         self.rect = pygame.Rect(int(self.pos.x), int(self.pos.y), PLAYER_SIZE, PLAYER_SIZE)
-        self.collision_rect = self.rect # for the moment...
+        self.collision_rect = pygame.Rect(0,0,14,14) # size of the player's feet
+        self.collision_rect.midbottom = self.rect.midbottom
+
+
+    def fix_pos(self):
+        """ Sets the position to reflect the position of the rects. Used in collisions. """
+        self.rect.midbottom = self.collision_rect.midbottom
+        self.pos.x, self.pos.y = float(self.rect.x), float(self.rect.y)
 
 
     def render(self, camera):

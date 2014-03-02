@@ -16,7 +16,7 @@ class PlayerWallPhysics:
         for tile_coords in PlayerWallPhysics.get_potential_collision_tiles(player):
             x, y = tile_coords
             t = _map.tile[x, y]
-            if t.collision_rect and player.rect.colliderect(t.collision_rect):
+            if t.collision_rect and player.collision_rect.colliderect(t.collision_rect):
                 PlayerWallPhysics.handle_collision(player, t)
     
     
@@ -28,21 +28,22 @@ class PlayerWallPhysics:
             return
         
         if player.dir == direction.UP:
-            player.pos.y = tile.collision_rect.bottom
+            player.collision_rect.top = tile.collision_rect.bottom
         elif player.dir == direction.DOWN:
-            player.pos.y = tile.collision_rect.top - PLAYER_SIZE
+            player.collision_rect.bottom = tile.collision_rect.top
         elif player.dir == direction.LEFT:
-            player.pos.x = tile.collision_rect.right
+            player.collision_rect.left = tile.collision_rect.right
         elif player.dir == direction.RIGHT:
-            player.pos.x = tile.collision_rect.left - PLAYER_SIZE
+            player.collision_rect.right = tile.collision_rect.left
         
-        player.fix_rect()
+        player.fix_pos()
         player.vel.x, player.vel.y = 0.0, 0.0
         player.dir = None
         
     
     def get_potential_collision_tiles(player):
         """ Generator that returns tiles that the player is in range to collide with. """
+        
         xq, xr = divmod(player.rect.left, TILE_SIZE)
         yq, yr = divmod(player.rect.top, TILE_SIZE)
         
