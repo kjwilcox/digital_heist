@@ -15,6 +15,7 @@ class Level:
         
         self.areas = {}
         self.area = None
+        self.complete = False
     
     
     def process_input(self, _input):
@@ -24,9 +25,13 @@ class Level:
 
 
     def update(self):
-        """ Passes update call to current area. """
+        """ Passes update call to current area. Returns whether or not the level is complete. """
         
         self.area.update()
+        
+        return self.complete
+        
+        
 
  
     def render(self):

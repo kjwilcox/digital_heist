@@ -15,6 +15,7 @@ class Interactable:
         self.rect = location
         self.collision_rect = collision_rect
         self.area = area
+        self.enabled = True
         
         
     def render(self, camera):

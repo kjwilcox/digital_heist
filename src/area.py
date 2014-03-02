@@ -12,13 +12,14 @@ class Area:
         It also owns a camera that centers on the player. """
         
         
-    def __init__(self, _player, _map):
+    def __init__(self, _player, _map, _level):
         """ Creates an area with the given player on the given map. """
         
         self.map = _map
         self.map.area = self
         self.player = _player
         self.player.area = self
+        self.level = _level
         self.camera = camera.PlayerCenteredCamera(self.player, self.map)
         self.interactables = {}
         self.state = AreaState.Gameplay

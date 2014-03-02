@@ -55,6 +55,14 @@ class MissingTile(Tile):
         log.error("Missing tile created at {}, {}".format(pos[0], pos[1]))
  
  
+class VerticalDoorTile(Tile):
+    def __init__(self, pos):
+        super().__init__(pos)
+        self.image = exhibition.images()["vwalldoor"]
+        self.collision_rect = pygame.Rect(self.rect)
+        self.collision_rect.width /= 8
+        self.collision_rect.center = self.rect.center
+ 
 # This tile mapping maps the integers in the map file format to the appropriate tile types.
 # This dictionary IS the file format for the map.
-tile_mapping = collections.defaultdict(MissingTile, {0: FloorTile, 1: WallTile})
+tile_mapping = collections.defaultdict(MissingTile, {0: FloorTile, 1: WallTile, 2: VerticalDoorTile})
