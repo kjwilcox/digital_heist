@@ -49,14 +49,6 @@ class Level1(level.Level):
         
         self.mission_state = Level1State.LookingForData
         
-        
-    def update(self):
-        if self.mission_state == Level1State.Complete:
-            log.info("mission complete")
-            self.complete = True
-            
-        return super().update()
-        
 
 class Level1State:
     LookingForData, Escape, Complete = range(3)

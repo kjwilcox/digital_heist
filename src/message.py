@@ -8,18 +8,20 @@ import logging
 log = logging.getLogger(__name__)
 
 
+
 class MessageBox:
     """
     A message box appears on the screen, displays text, and pauses the game until it is dismissed.
     """
     
     
-    def __init__(self, msg, area):
+    def __init__(self, msg, area, callback=None):
         """ Creates a message box with the given message for the given area. """
         
         self.creation_time = pygame.time.get_ticks()
         self.message = msg
         self.area = area
+        self.callback = callback
         self.font = pygame.font.Font(None, 36)
         self.state = MessageBoxState.WaitingForInitialRelease
         

@@ -6,6 +6,10 @@ import camera
 import message
 import pygame
 
+import logging
+log = logging.getLogger(__name__)
+
+
 class Area:
     """ An area represents a discrete slice of gameplay data.
         It holds a map and a player (who moves around this map).
@@ -59,18 +63,24 @@ class Area:
             self.message.render()
         
         
-    def display_message(self, msg):
+    def display_message(self, msg, callback=None):
         """ Pops up a message window and pauses the game. """
         
+        log.debug("Creating message")
+        
         self.state = AreaState.Message
-        self.message = message.MessageBox(msg, self)
+        self.message = message.MessageBox(msg, self, callback)
         
     
     def remove_message(self):
         """ Removes the message windows and resumes the game. """
         
+        log.debug("removing message")
+        callback = self.message.callback
         self.message = None
         self.state = AreaState.Gameplay
+        if callback:
+            callback()
         
         
 
