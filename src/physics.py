@@ -61,4 +61,3 @@ class PlayerWallPhysics:
             for y in range(y_start, y_end):
                 yield (x, y)
                 
-

@@ -9,6 +9,7 @@ import map
 import area
 import objects.computer
 import objects.lvl1door
+import guard
 from data import TILE_SIZE
 
 import pygame
@@ -42,6 +43,10 @@ class Level1(level.Level):
         
         area1.interactables["comp1"] = computer1
         area1.interactables["exitdoor"] = exitdoor
+        
+        
+        g1 = guard.RandomGhostGuard((64,64))
+        area1.guards["g1"] = g1
         
         
         self.areas[1] = area1

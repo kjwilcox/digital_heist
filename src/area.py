@@ -27,6 +27,7 @@ class Area:
         self.camera = camera.PlayerCenteredCamera(self.player, self.map)
         self.interactables = {}
         self.state = AreaState.Gameplay
+        self.guards = {}
     
     
     def process_input(self, _input):
@@ -44,6 +45,11 @@ class Area:
             self.player.update()
             physics.PlayerWallPhysics.update(self.map, self.player)
             
+            for guard in self.guards.values():
+                guard.update()
+            
+            # guard phsyics
+            
             self.camera.update()
         elif self.state == AreaState.Message:
             pass
@@ -58,6 +64,10 @@ class Area:
             i.render(self.camera)
             
         self.player.render(self.camera)
+        
+        for guard in self.guards.values():
+            guard.render(self.camera)
+        
         
         if self.state == AreaState.Message:
             self.message.render()
