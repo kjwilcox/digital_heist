@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import level
+from levels import level
 import data
 
 import exhibition

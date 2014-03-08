@@ -7,7 +7,7 @@ import player
 import inputdevice
 import data
 
-import level1
+from levels import level1
 
 import os
 import pygame
