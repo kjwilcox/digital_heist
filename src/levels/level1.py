@@ -24,7 +24,7 @@ class Level1(level.Level):
     def __init__(self):
         super().__init__()
         
-        p = player.Player((96.0,96.0))
+        p = player.Player((80.0,80.0))
         m = map.Map(os.path.join(data.DATA_DIR, "maps", "map1.txt"))
         area1 = area.Area(p, m, self)
         
@@ -45,7 +45,7 @@ class Level1(level.Level):
         area1.interactables["exitdoor"] = exitdoor
         
         
-        g1 = guard.RandomGhostGuard((64,64))
+        g1 = guard.PatrollingGuard([(6,1), (10,1)])
         area1.guards["g1"] = g1
         
         

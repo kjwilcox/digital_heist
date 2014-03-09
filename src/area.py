@@ -62,13 +62,12 @@ class Area:
         
         for k, i in self.interactables.items():
             i.render(self.camera)
-            
-        self.player.render(self.camera)
         
         for guard in self.guards.values():
             guard.render(self.camera)
         
-        
+        self.player.render(self.camera)
+
         if self.state == AreaState.Message:
             self.message.render()
         

@@ -28,6 +28,7 @@ class Engine:
         log.info("Initializing display surface at {}x{}".format(
             data.SCREEN_RESOLUTION[0], data.SCREEN_RESOLUTION[1]))
         self.screen = pygame.display.set_mode(data.SCREEN_RESOLUTION)
+        pygame.display.set_caption("digital heist")
         
         # load image resources
         exhibition.images(os.path.join(data.DATA_DIR, "images"))
