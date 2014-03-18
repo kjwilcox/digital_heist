@@ -2,6 +2,9 @@
 
 class AStar:
     
+    def __init__(self, _map):
+        self.map = _map
+    
     def cost_estimate(self, p1, p2):
         x1, y1 = p1
         x2, y2 = p2
@@ -36,12 +39,13 @@ class AStar:
     
     def get_neighbors(self, node):
         x, y = node
-        return (
-            (x, y + 1),
-            (x, y - 1),
-            (x - 1, y),
-            (x + 1, y)
-        )
+        
+        neighbors = []
+        
+        for potential_neighbor in ((x, y + 1),(x, y - 1),(x - 1, y),(x + 1, y)):
+            pass
+        
+        
     
     
     
