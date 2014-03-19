@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+import logging
+log = logging.getLogger(__name__)
+
 class AStar:
     
     def __init__(self, _map):
@@ -13,10 +16,9 @@ class AStar:
     
     
     def get_best_open_node(self):
-        best = self.open_set[0]
-        
+        best = None
         for n in self.open_set:
-            if self.f_score[n] < f_score[best]:
+            if self.f_score[n] < self.f_score.get(best, 99999999): # impossibly bad cost
                 best = n
         
         return best
@@ -27,50 +29,42 @@ class AStar:
             return (p + [current])
         else:
             return [current]
-        """
- 
-        function reconstruct_path(came_from, current_node)
-            if current_node in came_from
-                p := reconstruct_path(came_from, came_from[current_node])
-                return (p + current_node)
-            else
-                return current_node
-        """
+
     
     def get_neighbors(self, node):
         x, y = node
         
         neighbors = []
         
-        for potential_neighbor in ((x, y + 1),(x, y - 1),(x - 1, y),(x + 1, y)):
-            pass
-        
+        for x1, y1 in ((x, y + 1),(x, y - 1),(x - 1, y),(x + 1, y)):
+            if x1 in range(self.map.width) and y1 in range(self.map.height):
+                tile = self.map.tile[(x1, y1)]
+                if tile.collision_rect == None:
+                    # this tile exists and doesnt have any collision so it
+                    # is probably safe to move through
+                    neighbors.append((x1,y1))
+                    
+        return neighbors
         
     
     
     
     def find_path(self, start, goal):
+        log.debug("pathfind from {} to {}".format(start,goal))
     
         self.closed_set = set()
-        self.open_set = set(start)
+        self.open_set = set()
+        self.open_set.add(start)
         self.came_from = {}
         
         self.g_score = {}
+        self.f_score = {}
         self.g_score[start] = 0
         self.f_score[start] = self.g_score[start] + self.cost_estimate(start, goal)
         
-        """    
-        function A*(start,goal)
-            closedset := the empty set    // The set of nodes already evaluated.
-            openset := {start}    // The set of tentative nodes to be evaluated, initially containing the start node
-            came_from := the empty map    // The map of navigated nodes.
          
-            g_score[start] := 0    // Cost from start along best known path.
-            // Estimated total cost from start to goal through y.
-            f_score[start] := g_score[start] + heuristic_cost_estimate(start, goal)
-        """
-         
-        while open_set:  # while set is not empty
+        while self.open_set:  # while set is not empty
+            log.debug("open set: {}".format(self.open_set))
             current = self.get_best_open_node()
             if current == goal:
                 return self.reconstruct_path(goal)
@@ -84,35 +78,13 @@ class AStar:
                 tentative_g_score = self.g_score[current] + 1 # 1 is the distance between current and neighbor
                 
             if neighbor not in self.open_set or tentative_g_score < g_score[neighbor]:
-                came_from[neighbor] = current
-                g_score[neighbor] = tentative_g_score
-                f_score[neighbor] = g_score[neighbor] + self.cost_estimate(neighbor, goal)
+                self.came_from[neighbor] = current
+                self.g_score[neighbor] = tentative_g_score
+                self.f_score[neighbor] = self.g_score[neighbor] + self.cost_estimate(neighbor, goal)
                 if neighbor not in self.open_set:
                     self.open_set.add(neighbor)
                     
-        raise Exception("Could not pathfind")
- 
-        """
-            while openset is not empty
-                current := the node in openset having the lowest f_score[] value
-                if current = goal
-                    return reconstruct_path(came_from, goal)
-         
-                remove current from openset
-                add current to closedset
-                for each neighbor in neighbor_nodes(current)
-                    if neighbor in closedset
-                        continue
-                    tentative_g_score := g_score[current] + dist_between(current,neighbor)
-         
-                    if neighbor not in openset or tentative_g_score < g_score[neighbor] 
-                        came_from[neighbor] := current
-                        g_score[neighbor] := tentative_g_score
-                        f_score[neighbor] := g_score[neighbor] + heuristic_cost_estimate(neighbor, goal)
-                        if neighbor not in openset
-                            add neighbor to openset
-         
-            return failure
-        """
-    
+        log.info("Could not find path from {} to {}".format(start, goal))
+        return None
+
 

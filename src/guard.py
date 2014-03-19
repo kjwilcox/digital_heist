@@ -7,6 +7,8 @@ import exhibition
 import random
 import map
 
+import astar
+
 import logging
 log = logging.getLogger(__name__)
 
@@ -16,9 +18,10 @@ class Guard:
         Guard's posess a counter that limits how often they will stop to think.
         This represents a guard's reaction time, and planning capabilities. """
         
-    def __init__(self, pos):
+    def __init__(self, _map, pos):
         self.pos = pygame.Rect(pos,(32,32))
         self.image = exhibition.images()["guard"]
+        self.map = _map
         self.counter = random.randint(0, 60)
         self.counter_max = 60 # this means the guard will do planning once every 60 engine ticks
 
@@ -50,14 +53,16 @@ class PatrollingGuard(Guard):
         After moving to each point, it will start with the first point again.
         Points should be in tile coordinates. """
         
-    def __init__(self, points):
+    def __init__(self, _map, points):
         self.points = points
+        self._point_gen = self.point_generator()
         self.goal_point = self.get_next_point()
         log.debug("goal point {}".format(self.goal_point))
-        super().__init__(map.Map.tile_to_world_coords(self.goal_point))
+        super().__init__(_map, map.Map.tile_to_world_coords(self.goal_point))
+        self.pathfinder = astar.AStar(self.map)
         
     def get_next_point(self):
-        return next(self.point_generator())
+        return next(self._point_gen)
     
     def point_generator(self):
         """ Generator that returns the next point on the patrol path. """
@@ -67,7 +72,29 @@ class PatrollingGuard(Guard):
                 yield point
                 
     def think(self):
-        pass
+        if (self.at_goal()):
+            self.find_new_goal()
+        else:
+            self.move_toward_goal()
+            
+    def at_goal(self):
+        return True
+        # if tile coords are not goal coords, return false
+        # if they are, then check to see if we are in the center yet
+        #if not return false
+    
+    def find_new_goal(self, ):
+        current = map.Map.world_to_tile_coords(self.pos.topleft)
+        
+        target = self.get_next_point()
+        
+        self.path = self.pathfinder.find_path(current, target)
+        log.debug("guard found path {}".format(self.path))
+            
+        
+    
+    
+    
         
     
     

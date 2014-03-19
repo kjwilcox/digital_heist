@@ -66,7 +66,7 @@ class Map:
         x, y = coords
         return (x * TILE_SIZE, y * TILE_SIZE)
     
-    def world_to_tile_coords(self, coords):
+    def world_to_tile_coords(coords):
         x, y = coords
         return (x // TILE_SIZE, y // TILE_SIZE)
     

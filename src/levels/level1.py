@@ -45,7 +45,7 @@ class Level1(level.Level):
         area1.interactables["exitdoor"] = exitdoor
         
         
-        g1 = guard.PatrollingGuard([(6,1), (10,1)])
+        g1 = guard.PatrollingGuard(m, [(6,1), (10,1)])
         area1.guards["g1"] = g1
         
         
