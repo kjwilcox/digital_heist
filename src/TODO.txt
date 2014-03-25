@@ -32,9 +32,7 @@ player
 
 
 get NPCs in the game
-    stationary AI
-    basic movement for AI
-    add movement pattern support (guard on patrol)
+
     add guard psychology (state machine for suspisious/alert)
     add guard sight and triggers
     add guard communications (radio, etc)
