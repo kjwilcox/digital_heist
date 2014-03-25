@@ -8,6 +8,8 @@ import collections
 import logging
 log = logging.getLogger(__name__)
 
+DEBUG_RENDER_COORDS = True
+
 
 class Tile:
     """ A tile represents one tile in an area's map.
@@ -23,12 +25,22 @@ class Tile:
         self.rect = pygame.Rect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE)
         self.collision_rect = None
         
+        if DEBUG_RENDER_COORDS:
+            font = pygame.font.Font(None, 24)
+            self.coord_text = font.render("({}, {})".format(self.tile_pos[0], self.tile_pos[1]), True, (0,0,0, 100))
+        
         
     def render(self, camera):
         """ Renders the map tile to the screen using the provided camera. """
         
         screen = pygame.display.get_surface()
-        screen.blit(self.image, camera.world_to_screen(self.rect.topleft))
+        pos = camera.world_to_screen(self.rect.topleft)
+        screen.blit(self.image, pos)
+        
+        if DEBUG_RENDER_COORDS:
+            x, y = pos
+            screen.blit(self.coord_text, (x + 4, y + 4))
+        
 
 
 ##################################

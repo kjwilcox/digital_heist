@@ -24,7 +24,7 @@ class Guard:
         self.pos = pygame.Rect(pos,(32,32))
         self.image = exhibition.images()["guard"]
         self.map = _map
-        self.move_speed = 3
+        self.move_speed = 6
         self.vel = collections.namedtuple('velocity', ['x', 'y'])
         self.vel.x, self.vel.y = 0,0
 
