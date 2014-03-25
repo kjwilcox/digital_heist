@@ -79,12 +79,12 @@ class AStar:
                     continue
                 tentative_g_score = self.g_score[current] + 1 # 1 is the distance between current and neighbor
                 
-            if neighbor not in self.open_set or tentative_g_score < g_score[neighbor]:
-                self.came_from[neighbor] = current
-                self.g_score[neighbor] = tentative_g_score
-                self.f_score[neighbor] = self.g_score[neighbor] + self.cost_estimate(neighbor, goal)
-                if neighbor not in self.open_set:
-                    self.open_set.add(neighbor)
+                if neighbor not in self.open_set or tentative_g_score < g_score[neighbor]:
+                    self.came_from[neighbor] = current
+                    self.g_score[neighbor] = tentative_g_score
+                    self.f_score[neighbor] = self.g_score[neighbor] + self.cost_estimate(neighbor, goal)
+                    if neighbor not in self.open_set:
+                        self.open_set.add(neighbor)
                     
         log.info("Could not find path from {} to {}".format(start, goal))
         return None
