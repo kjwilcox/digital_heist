@@ -32,6 +32,7 @@ class AStar:
 
     
     def get_neighbors(self, node):
+        log.debug("getting neighbors of {}".format(node))
         x, y = node
         
         neighbors = []
@@ -43,7 +44,8 @@ class AStar:
                     # this tile exists and doesnt have any collision so it
                     # is probably safe to move through
                     neighbors.append((x1,y1))
-                    
+        
+        log.debug("returning neighbors of {} as: {}".format(node, neighbors))            
         return neighbors
         
     
