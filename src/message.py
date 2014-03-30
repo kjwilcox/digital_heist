@@ -26,14 +26,14 @@ class MessageBox:
         self.state = MessageBoxState.WaitingForInitialRelease
         
         screen = pygame.display.get_surface().get_rect()
-        message_rect = pygame.Rect(0,0,1,1)
+        message_rect = pygame.Rect(0, 0, 1, 1)
         message_rect.width = screen.width - (screen.width * 0.2)
         message_rect.height = screen.height * 0.2
         message_rect.midbottom = screen.midbottom
         message_rect.y -= screen.height * 0.1
         self.rect = message_rect
         
-        self.surf = textrect.render_textrect(self.message, self.font, self.rect, (0,0,0), (255,255,255))
+        self.surf = textrect.render_textrect(self.message, self.font, self.rect, (0, 0, 0), (255, 255, 255))
         
         
     def render(self):

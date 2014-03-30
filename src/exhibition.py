@@ -57,7 +57,6 @@ as a reference to the dict.
 """
 
 import pygame
-import glob
 import os
 import logging
 
@@ -74,7 +73,7 @@ __images = None
 __optimized = False
 
     
-def images(directory=os.path.join("data","images")):
+def images(directory=os.path.join("data", "images")):
     """
     Returns a recursive dict of loaded images.
     Safe to call multiple times, it will always
@@ -118,30 +117,30 @@ def __load_images(directory):
         raise RuntimeError("Could not load image directory.")
 
 
-def __optimize(images):
+def __optimize(_images):
     """
     Optimizes a dict of already loaded images (strips transparency).
     Only call after you have created your display surface.
     """
 
-    for key in images:
-        if type(images[key]) == dict:
-            __optimize(images[key])
+    for key in _images:
+        if type(_images[key]) == dict:
+            __optimize(_images[key])
         else:
-            images[key] = images[key].convert()
+            _images[key] = _images[key].convert()
 
 
-def __optimize_alpha(images):
+def __optimize_alpha(_images):
     """
     Optimizes a dict of already loaded images (includes transparency).
     Only call after you have created your display surface.
     """
 
-    for key in images:
-        if type(images[key]) == dict:
-            __optimize_alpha(images[key])
+    for key in _images:
+        if type(_images[key]) == dict:
+            __optimize_alpha(_images[key])
         else:
-            images[key] = images[key].convert_alpha()
+            _images[key] = _images[key].convert_alpha()
 
 
 def __get_dir_dict(d):

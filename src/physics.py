@@ -49,12 +49,12 @@ class PlayerWallPhysics:
         
         x_start = xq
         x_end = xq + 1
-        if (xr > PLAYER_SIZE):
+        if xr > PLAYER_SIZE:
             x_end += 1
         
         y_start = yq
         y_end = yq + 1
-        if (yr > PLAYER_SIZE):
+        if yr > PLAYER_SIZE:
             y_end += 1
             
         for x in range(x_start, x_end):

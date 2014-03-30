@@ -63,14 +63,12 @@ class Engine:
             
             self.level.process_input(self.input)
             complete = self.level.update()
-            
-            
-            self.screen.fill((0,0,0))
+
+            self.screen.fill((0, 0, 0))
             self.level.render()
             
             pygame.display.flip()
             ms = clock.tick(60)
-            #log.debug("{}ms".format(ms))
             
             if complete:
                 break

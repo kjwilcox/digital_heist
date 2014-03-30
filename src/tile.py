@@ -27,7 +27,7 @@ class Tile:
         
         if DEBUG_RENDER_COORDS:
             font = pygame.font.Font(None, 24)
-            self.coord_text = font.render("({}, {})".format(self.tile_pos[0], self.tile_pos[1]), True, (0,0,0, 100))
+            self.coord_text = font.render("({}, {})".format(self.tile_pos[0], self.tile_pos[1]), True, (0, 0, 0, 100))
         
         
     def render(self, camera):

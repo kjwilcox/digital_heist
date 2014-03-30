@@ -41,15 +41,12 @@ class Map:
     def render(self, camera):
         """ Renders the map to the screen. """
         
-        screen = pygame.display.get_surface()
-        
         start_x = camera.rect.left // TILE_SIZE
         start_y = camera.rect.top // TILE_SIZE
         
         end_x = camera.rect.right // TILE_SIZE
         end_y = camera.rect.bottom // TILE_SIZE
-        
-        
+
         for y in range(start_y, min(end_y + 1, self.height)):
             for x in range(start_x, min(end_x + 1, self.width)):
                 
@@ -57,7 +54,7 @@ class Map:
                     t = self.tile[x, y]
                     t.render(camera)
                     
-                except:
+                except KeyError:
                     #log.error("tried to render non-existant tile ({}, {})".format(x, y))
                     continue
                 

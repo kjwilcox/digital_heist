@@ -28,6 +28,8 @@ class Player:
         self.dir = None
         self.vel.x, self.vel.y = 0.0, 0.0
         self.move_speed = 4.0
+        self.rect = None
+        self.collision_rect = None
         self.fix_rect()
         
     def __str__(self):
@@ -44,9 +46,7 @@ class Player:
         if i.A:
             if self.attempt_interact():
                 return
-        
 
-        d = self.dir
         if d in (direction.UP, None) and i.up:
             self.vel.y -= self.move_speed
             self.dir = direction.UP
@@ -107,7 +107,7 @@ class Player:
                 collision = v
                 break
         
-        if collision != None:
+        if collision:
             collision.interact(self)
             
 

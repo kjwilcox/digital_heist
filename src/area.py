@@ -2,9 +2,7 @@
 
 import physics
 import camera
-
 import message
-import pygame
 
 import logging
 log = logging.getLogger(__name__)
@@ -14,8 +12,7 @@ class Area:
     """ An area represents a discrete slice of gameplay data.
         It holds a map and a player (who moves around this map).
         It also owns a camera that centers on the player. """
-        
-        
+
     def __init__(self, _player, _map, _level):
         """ Creates an area with the given player on the given map. """
         
@@ -28,8 +25,9 @@ class Area:
         self.interactables = {}
         self.state = AreaState.Gameplay
         self.guards = {}
-    
-    
+        self.message = None
+
+
     def process_input(self, _input):
         """ Passes input from the input device to the player. """
         
@@ -48,7 +46,7 @@ class Area:
             for guard in self.guards.values():
                 guard.update()
             
-            # guard phsyics
+            # guard physics
             
             self.camera.update()
         elif self.state == AreaState.Message:
