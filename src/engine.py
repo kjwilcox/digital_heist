@@ -2,8 +2,6 @@
 
 
 import exhibition
-import map
-import player
 import inputdevice
 import data
 
@@ -68,6 +66,7 @@ class Engine:
             self.level.render()
             
             pygame.display.flip()
+            # noinspection PyUnusedLocal,PyUnusedLocal
             ms = clock.tick(60)
             
             if complete:

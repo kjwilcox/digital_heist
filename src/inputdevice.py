@@ -14,8 +14,8 @@ class InputDevice:
         self.down = False
         self.left = False
         self.right = False
-        self.A = False
-        self.B = False
+        self.a_button = False
+        self.b_button = False
         self.start = False
         self.select = False  
         
@@ -37,8 +37,8 @@ class KeyboardInput(InputDevice):
         self.down = True if keys[pygame.K_DOWN] else False
         self.left = True if keys[pygame.K_LEFT] else False
         self.right = True if keys[pygame.K_RIGHT] else False
-        self.A = True if (keys[pygame.K_SPACE] or keys[pygame.K_z]) else False
-        self.B = True if (keys[pygame.K_LCTRL] or keys[pygame.K_x]) else False
+        self.a_button = True if (keys[pygame.K_SPACE] or keys[pygame.K_z]) else False
+        self.b_button = True if (keys[pygame.K_LCTRL] or keys[pygame.K_x]) else False
         self.start = True if keys[pygame.K_RETURN] else False
         self.select = True if keys[pygame.K_BACKSPACE] else False
 

@@ -157,6 +157,7 @@ def __get_dir_dict(d):
     gen = os.walk(d)
     
     try:
+        # noinspection PyTypeChecker
         parent, dirs, files = next(gen)
     except StopIteration:
         raise ValueError("Cannot traverse directory %s" % d)

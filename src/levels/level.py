@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 
-import physics
-
 
 class Level:
-    """ A Level is an abstract base class, which must be overridden by an actual level.
-        A Level is a container for one or more areas in a mission.
-        A level should always have an active area set. This active area
-        will receive update calls, input, and rendering calls. """
+    """
+    A Level is an abstract base class, which must be overridden by an actual level.
+    A Level is a container for one or more areas in a mission.
+    A level should always have an active area set. This active area
+    will receive update calls, input, and rendering calls.
+    """
 
 
     def __init__(self):

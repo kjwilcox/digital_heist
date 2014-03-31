@@ -15,8 +15,7 @@ class Tile:
     """ A tile represents one tile in an area's map.
         It has an image, a position rectangle, and an optional collision rectangle.
         An abstract base class. Child classes must define an image."""
-        
-        
+
     def __init__(self, pos):
         """ Initializes a tile with position. No image or collision rect set. """
         
@@ -24,12 +23,12 @@ class Tile:
         x, y = pos
         self.rect = pygame.Rect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE)
         self.collision_rect = None
+        self.image = None
         
         if DEBUG_RENDER_COORDS:
             font = pygame.font.Font(None, 24)
             self.coord_text = font.render("({}, {})".format(self.tile_pos[0], self.tile_pos[1]), True, (0, 0, 0, 100))
-        
-        
+
     def render(self, camera):
         """ Renders the map tile to the screen using the provided camera. """
         
@@ -40,16 +39,14 @@ class Tile:
         if DEBUG_RENDER_COORDS:
             x, y = pos
             screen.blit(self.coord_text, (x + 4, y + 4))
-        
-
 
 ##################################
+
 
 class FloorTile(Tile):
     def __init__(self, pos):
         super().__init__(pos)
         self.image = exhibition.images()["floor"]
-
 
 
 class WallTile(Tile):
@@ -58,8 +55,7 @@ class WallTile(Tile):
         self.collision_rect = self.rect
         self.image = exhibition.images()["wall"]
     
-    
-    
+
 class MissingTile(Tile):
     def __init__(self, pos):
         super().__init__(pos)

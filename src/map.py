@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 
-import exhibition
 import tile
 
 import pygame
@@ -57,14 +56,16 @@ class Map:
                 except KeyError:
                     #log.error("tried to render non-existant tile ({}, {})".format(x, y))
                     continue
-                
+
+    @staticmethod
     def tile_to_world_coords(coords):
         x, y = coords
-        return (x * TILE_SIZE, y * TILE_SIZE)
-    
+        return x * TILE_SIZE, y * TILE_SIZE
+
+    @staticmethod
     def world_to_tile_coords(coords):
         x, y = coords
-        return (x // TILE_SIZE, y // TILE_SIZE)
+        return x // TILE_SIZE, y // TILE_SIZE
     
 
 

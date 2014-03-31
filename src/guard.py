@@ -3,11 +3,9 @@
 import pygame
 import collections
 
-import direction
+#import direction
 import exhibition
-import random
 import map
-
 import astar
 
 import logging
@@ -38,7 +36,6 @@ class Guard:
     
     def think(self):
         log.debug("{} is thinking, but he is dumb and has no AI".format(self))
-        pass
     
     def act(self):
         self.pos.x += self.vel.x
@@ -57,20 +54,17 @@ class PatrollingGuard(Guard):
         self.goal_tile = self.get_next_point()
         self.current_goal_coord = None
         log.debug("goal point {}".format(self.goal_tile))
-        
         super().__init__(_map, map.Map.tile_to_world_coords(self.goal_tile))
-        #fix position
-        self.pos.topleft = self.get_target_point(self.goal_tile)
+        self.pos.topleft = self.get_target_point(self.goal_tile)  # fix position
         self.pathfinder = astar.AStar(self.map)
         self.path = []
 
-        
     def get_next_point(self):
+        """ Returns the next point on the patrol path. """
         return next(self._point_gen)
     
     def point_generator(self):
         """ Generator that returns the next point on the patrol path. """
-        
         while True:
             for point in self.points:
                 yield point
@@ -81,11 +75,11 @@ class PatrollingGuard(Guard):
             self.find_new_goal()        # pathfind to new point on route
         
         self.plan_move_toward_goal()         # move toward the next tile on our path
-            
-            
+
     def at_goal(self):
+        """ Returns boolean reflecting whether the guard has reached his next patrol point. """
         log.debug("guard checking to see if he's at the goal")
-        # check if the guard is on the right tile
+        # check if the guard is on the correct tile
         guard_pos = self.pos.topleft
         guard_tile = map.Map.world_to_tile_coords(guard_pos)
         
@@ -101,21 +95,17 @@ class PatrollingGuard(Guard):
         log.debug("guard not on exact right coords: {}".format(self.get_target_point(self.goal_tile)))
         return False    # otherwise return false
 
-    
     def find_new_goal(self):
+        """ Performs pathfinding to the next patrol point on the guard's route. """
         log.debug("guard finding new goal")
         current = map.Map.world_to_tile_coords(self.pos.topleft)
         self.goal_tile = self.get_next_point()
         
         self.path = self.pathfinder.find_path(current, self.goal_tile)
         log.debug("guard found path {}".format(self.path))
-        
-    
+
     def plan_move_toward_goal(self):
-        log.debug("guard moving toward goal")
-        # using the list of tiles that the pathfinding so nicely made for us,
-        # we will move to the appropriate tiles in turn
-        
+        """ Plans movement toward teh next tile on the path to the patrol point. """
         # if we don't have a goal coordinate, get one from the pathfinding list
         # also if we are currently at our goal point, try to get a new one
         if not self.current_goal_coord or self.current_goal_coord == self.pos.topleft:
@@ -123,79 +113,63 @@ class PatrollingGuard(Guard):
             self.current_goal_coord = self.get_target_point(goal_tile)
             log.debug("new goal tile {} ({})".format(goal_tile, self.current_goal_coord))
             
-        # if we go this far, we assume we have a valid goal to move toward
+        # We assume we have a valid goal to move toward
         # time to calculate the movement vector
-        
+        self.set_movement_velocity()
+                    
+        log.debug("velocity: {}".format(self.vel))
+
+    def set_movement_velocity(self):
+        """ Set's the guard's velocity to move toward the current goal coordinate. """
         self.vel.x, self.vel.y = 0, 0
-        
         x, y = self.pos.topleft
         tx, ty = self.current_goal_coord
-        
-        log.debug("current: {}, target: {}".format((x, y), (tx, ty)))
-        
-        if x != tx and y != ty:
-            log.warning("guard's target path is not in straight line")
-            return
-        
+
         # moving up or down
         if x == tx:
             y_diff = ty - y
-            
+
             # moving downward (positive y direction)
             if y_diff > 0:
                 if y_diff > self.move_speed:
                     self.vel.y = self.move_speed
                 else:
                     self.vel.y = y_diff
-                
-            else: # moving upward (negative y)
+
+            else:  # moving upward (negative y)
                 if abs(y_diff) > self.move_speed:
                     self.vel.y = -self.move_speed
                 else:
                     self.vel.y = y_diff
-        
+
         # moving left or right
         if y == ty:
             x_diff = tx - x
-            
+
             # moving right (positive x direction)
             if x_diff > 0:
                 if x_diff > self.move_speed:
                     self.vel.x = self.move_speed
                 else:
                     self.vel.x = x_diff
-            else: # moving left (negative x)
+            else:  # moving left (negative x)
                 if abs(x_diff) > self.move_speed:
                     self.vel.x = -self.move_speed
                 else:
                     self.vel.x = x_diff
-                    
-        log.debug("velocity: {}".format(self.vel))
-        
 
-        
-        
+        log.debug("current: {}, target: {}".format((x, y), (tx, ty)))
+
+        if x != tx and y != ty:
+            log.warning("guard's target path is not in straight line")
+            return
+
     def get_target_point(self, tile_coord):
+        """
+        Returns the world pixel coordinates of the destination in the given tile,
+        such that the guard will be centered in tile.
+        """
         goal = pygame.Rect(self.pos)
         tile = self.map.tile[tile_coord]
         goal.center = tile.rect.center
         return goal.topleft
-    
-    
-        
-    
-    
-
-    
-
-class RandomGhostGuard(Guard):
-    
-    def __init__(self, pos):
-        super().__init__(pos)
-    
-    def act(self):
-        if random.random() > .4:
-            d = random.choice([(0, 1), (1, 0), (0, -1), (-1, 0)])
-            x, y = d
-            self.pos.x += x
-            self.pos.y += y

@@ -6,10 +6,11 @@ import direction
 import logging
 log = logging.getLogger(__name__)
 
+
 class PlayerWallPhysics:
     """ Static class to handle player vs wall collisions. """
     
-    
+    @staticmethod
     def update(_map, player):
         """ Main function that performs the collision detection and handling.
             Takes the map and player as arguments"""
@@ -19,11 +20,11 @@ class PlayerWallPhysics:
             if t.collision_rect and player.collision_rect.colliderect(t.collision_rect):
                 PlayerWallPhysics.handle_collision(player, t)
     
-    
+    @staticmethod
     def handle_collision(player, tile):
         """ Adjusts a player's position to be outside of the wall it collided with. """
         
-        if player.dir == None:
+        if not player.dir:
             log.error("Player collided with something but wasn't moving")
             return
         
@@ -40,7 +41,7 @@ class PlayerWallPhysics:
         player.vel.x, player.vel.y = 0.0, 0.0
         player.dir = None
         
-    
+    @staticmethod
     def get_potential_collision_tiles(player):
         """ Generator that returns tiles that the player is in range to collide with. """
         
@@ -60,4 +61,3 @@ class PlayerWallPhysics:
         for x in range(x_start, x_end):
             for y in range(y_start, y_end):
                 yield (x, y)
-                

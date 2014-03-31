@@ -4,9 +4,8 @@ import pygame
 import collections
 
 import exhibition
-import inputdevice
 import direction
-from data import PLAYER_SIZE, TILE_SIZE
+from data import PLAYER_SIZE
 
 import logging
 log = logging.getLogger(__name__)
@@ -43,7 +42,7 @@ class Player:
         d = self.dir
         self.dir = None
         
-        if i.A:
+        if i.a_button:
             if self.attempt_interact():
                 return
 

@@ -14,7 +14,8 @@ class AStar:
         self.g_score = {}
         self.f_score = {}
     
-    def cost_estimate(self, p1, p2):
+    @staticmethod
+    def cost_estimate(p1, p2):
         x1, y1 = p1
         x2, y2 = p2
         
@@ -53,8 +54,9 @@ class AStar:
         
         log.debug("returning neighbors of {} as: {}".format(node, neighbors))            
         return neighbors
-        
 
+
+    # noinspection PyDictCreation
     def find_path(self, start, goal):
         log.debug("pathfind from {} to {}".format(start,goal))
     
