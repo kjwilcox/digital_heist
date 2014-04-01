@@ -5,8 +5,7 @@ import pygame
 
 class InputDevice:
     """ A generic input device with a D-Pad and 4 buttons. Abstract base class."""
-    
-    
+
     def __init__(self):
         """ Abstract input device initializer. """
         
@@ -20,14 +19,11 @@ class InputDevice:
         self.select = False  
         
 
-
 class KeyboardInput(InputDevice):
     """ A class for controlling the game with the keyboard. """
-    
-    
+
     def __init__(self):
         super().__init__()
-
 
     def update(self):
         """ Reads the state of the keyboard and updates the virtual controller accordingly. """

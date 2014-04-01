@@ -8,12 +8,13 @@
 # Submission date: May 23, 2001
 
 
-
 class TextRectException(Exception):
     def __init__(self, message=None):
         self.message = message
+
     def __str__(self):
         return self.message
+
 
 def render_textrect(string, font, rect, text_color, background_color, justification=0):
     """

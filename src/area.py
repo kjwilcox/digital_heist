@@ -27,7 +27,6 @@ class Area:
         self.guards = {}
         self.message = None
 
-
     def process_input(self, _input):
         """ Passes input from the input device to the player. """
         
@@ -35,7 +34,6 @@ class Area:
             self.player.process_input(_input)
         elif self.state == AreaState.Message:
             self.message.process_input(_input)
-
 
     def update(self):
         """ Updates player, performs collision detection, and updates camera. """
@@ -52,7 +50,6 @@ class Area:
         elif self.state == AreaState.Message:
             pass
 
-
     def render(self):
         """ Renders the map and player using the camera's position. """
         
@@ -68,8 +65,7 @@ class Area:
 
         if self.state == AreaState.Message:
             self.message.render()
-        
-        
+
     def display_message(self, msg, callback=None):
         """ Pops up a message window and pauses the game. """
         
@@ -77,8 +73,7 @@ class Area:
         
         self.state = AreaState.Message
         self.message = message.MessageBox(msg, self, callback)
-        
-    
+
     def remove_message(self):
         """ Removes the message windows and resumes the game. """
         
@@ -88,7 +83,6 @@ class Area:
         self.state = AreaState.Gameplay
         if callback:
             callback()
-        
         
 
 class AreaState:

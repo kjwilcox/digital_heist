@@ -10,12 +10,12 @@ from data import PLAYER_SIZE
 import logging
 log = logging.getLogger(__name__)
 
+
 class Player:
     """ The player class represents a character controlled by the player.
         There may be multiple player instances, but generally only one is
         active and recieving inputs at any given time. """
-    
-    
+
     def __init__(self, starting_position):
         """ Creates a player at the specified (x, y) starting position. """
         
@@ -33,7 +33,6 @@ class Player:
         
     def __str__(self):
         return "<Player {}>".format(self.rect.topleft)
-
 
     def process_input(self, i):
         """ Modifies player's velocity based on given input device i. """
@@ -65,8 +64,7 @@ class Player:
             self.vel.x += self.move_speed
             self.dir = direction.RIGHT
             return
-    
-    
+
     def update(self):
         """ Updates position and snaps player to grid. """
         
@@ -74,27 +72,23 @@ class Player:
         self.pos.y += self.vel.y
         self.fix_rect()
 
-
     def fix_rect(self):
         """ Sets rectangle used for rendering and collision to integer coordinates. """
         
         self.rect = pygame.Rect(int(self.pos.x), int(self.pos.y), PLAYER_SIZE, PLAYER_SIZE)
-        self.collision_rect = pygame.Rect(0,0,14,14) # size of the player's feet
+        self.collision_rect = pygame.Rect(0, 0, 14, 14)  # size of the player's feet box
         self.collision_rect.midbottom = self.rect.midbottom
-
 
     def fix_pos(self):
         """ Sets the position to reflect the position of the rects. Used in collisions. """
         self.rect.midbottom = self.collision_rect.midbottom
         self.pos.x, self.pos.y = float(self.rect.x), float(self.rect.y)
 
-
     def render(self, camera):
         """ Renders player character on screen. """
         
         screen = pygame.display.get_surface()
         screen.blit(self.image, camera.world_to_screen((int(self.pos.x), int(self.pos.y))))
-
 
     def attempt_interact(self):
         log.debug("attempting collision")
@@ -108,5 +102,3 @@ class Player:
         
         if collision:
             collision.interact(self)
-            
-

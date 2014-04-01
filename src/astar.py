@@ -49,13 +49,13 @@ class AStar:
                 if not tile.collision_rect:
                     # this tile exists and doesnt have any collision so it
                     # is probably safe to move through
-                    neighbors.append((x1,y1))
+                    neighbors.append((x1, y1))
         
         log.debug("returning neighbors of {} as: {}".format(node, neighbors))            
         return neighbors
 
     def find_path(self, start, goal):
-        log.debug("pathfind from {} to {}".format(start,goal))
+        log.debug("pathfind from {} to {}".format(start, goal))
     
         self.closed_set = set()
         self.open_set = set()

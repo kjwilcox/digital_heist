@@ -17,8 +17,7 @@ class Engine:
     """ Main class responsible for running the game.
         Controls game setup and runs the main loop.
         Passes input to game and handles the event queue. """
-    
-    
+
     def __init__(self):
         """ Creates the display surface and loads the game assets. """
         
@@ -34,20 +33,18 @@ class Engine:
         
         self.level = level1.Level1()
         self.input = inputdevice.KeyboardInput()
-        
-    
+
     def run(self):
         """ Starts the game and runs the main game loop. """
         
         self.main_loop()
         pygame.quit()
-    
-    
+
     def main_loop(self):
         
         clock = pygame.time.Clock()
         
-        while 1:
+        while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     return
@@ -71,5 +68,3 @@ class Engine:
             
             if complete:
                 break
-
-

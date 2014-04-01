@@ -13,7 +13,7 @@ log.info("Tile size: {}".format(TILE_SIZE))
 PLAYER_SIZE = 32
 log.info("Player size: {}".format(PLAYER_SIZE))
 
-MESSAGE_BOX_DELAY = 250 # ms
+MESSAGE_BOX_DELAY = 250  # ms
 
 #SCREEN_RESOLUTION = (32*16, 32*9)
 SCREEN_RESOLUTION = (800, 600)

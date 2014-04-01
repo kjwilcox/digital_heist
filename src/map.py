@@ -35,7 +35,6 @@ class Map:
                     
             self.bounds = pygame.Rect(0, 0, self.width * TILE_SIZE, self.height * TILE_SIZE)
             log.debug("bounds: {}, {}".format(self.bounds.right, self.bounds.bottom))
-    
 
     def render(self, camera):
         """ Renders the map to the screen. """
