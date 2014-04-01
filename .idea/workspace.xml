@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7fd23a4-0279-4c40-994f-094c0e896581" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TODO.txt" afterPath="$PROJECT_DIR$/src/TODO.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/astar.py" afterPath="$PROJECT_DIR$/src/astar.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/computer.py" afterPath="$PROJECT_DIR$/src/objects/computer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/digital_heist.iml" afterPath="$PROJECT_DIR$/.idea/digital_heist.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/direction.py" afterPath="$PROJECT_DIR$/src/direction.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/engine.py" afterPath="$PROJECT_DIR$/src/engine.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/exhibition.py" afterPath="$PROJECT_DIR$/src/exhibition.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/guard.py" afterPath="$PROJECT_DIR$/src/guard.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/inputdevice.py" afterPath="$PROJECT_DIR$/src/inputdevice.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/interactable.py" afterPath="$PROJECT_DIR$/src/objects/interactable.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/levels/level.py" afterPath="$PROJECT_DIR$/src/levels/level.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/map.py" afterPath="$PROJECT_DIR$/src/map.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physics.py" afterPath="$PROJECT_DIR$/src/physics.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/player.py" afterPath="$PROJECT_DIR$/src/player.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tile.py" afterPath="$PROJECT_DIR$/src/tile.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="digital_heist.iws" />
@@ -41,17 +27,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="map.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/map.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="0" selection-start="2252" selection-end="2252" vertical-scroll-proportion="0.0" vertical-offset="703" max-vertical-offset="1377">
-              <folding>
-                <element signature="e#20#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="physics.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/physics.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -65,7 +40,9 @@
         <entry file="file://$PROJECT_DIR$/src/direction.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="6" column="0" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <folding />
+              <folding>
+                <marker date="1396306747749" expanded="true" signature="21:174" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,15 +51,6 @@
         <entry file="file://$PROJECT_DIR$/src/levels/level.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="7" column="4" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="engine.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/engine.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="17" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1377">
               <folding />
             </state>
           </provider>
@@ -108,11 +76,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="computer.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="computer.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/objects/computer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="50" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-              <folding />
+            <state line="18" column="50" selection-start="504" selection-end="504" vertical-scroll-proportion="0.43527737" vertical-offset="0" max-vertical-offset="703">
+              <folding>
+                <element signature="e#20#65#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,10 +96,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="astar.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="astar.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/astar.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="12" selection-start="2326" selection-end="2326" vertical-scroll-proportion="0.62074554" vertical-offset="943" max-vertical-offset="1734">
+            <state line="49" column="74" selection-start="1388" selection-end="1388" vertical-scroll-proportion="0.0" vertical-offset="571" max-vertical-offset="1632">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/levels/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="engine.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/engine.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="17" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1377">
               <folding />
             </state>
           </provider>
@@ -158,7 +146,6 @@
         <option value="$PROJECT_DIR$/src/TODO.txt" />
         <option value="$PROJECT_DIR$/src/guard.py" />
         <option value="$PROJECT_DIR$/src/engine.py" />
-        <option value="$PROJECT_DIR$/src/objects/computer.py" />
         <option value="$PROJECT_DIR$/src/map.py" />
         <option value="$PROJECT_DIR$/src/levels/level.py" />
         <option value="$PROJECT_DIR$/src/objects/interactable.py" />
@@ -168,6 +155,8 @@
         <option value="$PROJECT_DIR$/src/player.py" />
         <option value="$PROJECT_DIR$/src/tile.py" />
         <option value="$PROJECT_DIR$/src/astar.py" />
+        <option value="$PROJECT_DIR$/src/levels/__init__.py" />
+        <option value="$PROJECT_DIR$/src/objects/computer.py" />
       </list>
     </option>
   </component>
@@ -190,7 +179,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>PyPep8Inspection</id>
+            <id>PyDictCreationInspection</id>
           </State>
         </selected-state>
       </profile-state>
@@ -251,6 +240,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="digital_heist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="digital_heist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="objects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="digital_heist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="digital_heist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="levels" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -506,14 +531,14 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32252252" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="55" y="467" width="1858" height="366" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934684" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16167665" sideWeight="0.49954003" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16167665" sideWeight="0.49954003" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40846366" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40846366" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16167665" sideWeight="0.50045997" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32934684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -594,7 +619,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="140" column="8" selection-start="4955" selection-end="4955" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="3519">
           <folding>
-            <element signature="e#20#33#0" expanded="true" />
+            <element signature="e#20#33#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -662,7 +687,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="194" selection-end="194" vertical-scroll-proportion="-110.5" vertical-offset="0" max-vertical-offset="3077">
           <folding>
-            <element signature="e#20#33#0" expanded="true" />
+            <element signature="e#20#33#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -670,13 +695,6 @@
     <entry file="file://$PROJECT_DIR$/src/levels/level1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="54" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="850">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/engine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="17" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360">
           <folding />
         </state>
       </provider>
@@ -693,13 +711,6 @@
     <entry file="file://$PROJECT_DIR$/src/levels/level.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="4" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/objects/computer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="50" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
           <folding />
         </state>
       </provider>
@@ -728,7 +739,9 @@
     <entry file="file://$PROJECT_DIR$/src/direction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <folding />
+          <folding>
+            <marker date="1396306747749" expanded="true" signature="21:174" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -755,10 +768,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/engine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/astar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="12" selection-start="2326" selection-end="2326" vertical-scroll-proportion="0.62074554" vertical-offset="943" max-vertical-offset="1734">
+        <state line="49" column="74" selection-start="1388" selection-end="1388" vertical-scroll-proportion="0.0" vertical-offset="571" max-vertical-offset="1632">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/levels/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/objects/computer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="50" selection-start="504" selection-end="504" vertical-scroll-proportion="0.43527737" vertical-offset="0" max-vertical-offset="703">
+          <folding>
+            <element signature="e#20#65#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -17,7 +17,8 @@ class Computer(Interactable):
         if self.enabled:
             area = interacter.area
             if area.level.mission_state == levels.level1.Level1State.LookingForData:
-                area.display_message("I think this is the data I was looking for. It is! I had better get out of here while I still can.")
+                area.display_message("I think this is the data I was looking for. It is! "
+                                     "I had better get out of here while I still can.")
                 area.level.mission_state = levels.level1.Level1State.Escape
             else:
                 area.display_message("I already got the data, time to go!.")
