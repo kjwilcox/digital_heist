@@ -17,12 +17,15 @@ class AStar:
     
     @staticmethod
     def cost_estimate(p1, p2):
+        """ Provides a city-block cost estimate between coordinates. """
         x1, y1 = p1
         x2, y2 = p2
         
         return abs(x1 - x2) + abs(y1 - y2)
 
     def get_best_open_node(self):
+        """ Return the node with the lowest cost from the open set of nodes. """
+        # a candidate for optimization if it becomes necessary
         best = None
         for n in self.open_set:
             if self.f_score[n] < self.f_score.get(best, 99999999):  # impossibly bad cost
@@ -31,6 +34,7 @@ class AStar:
         return best
         
     def reconstruct_path(self, current):
+        """ Helper function used to construct the path once we are done searching. """
         if current in self.came_from:
             p = self.reconstruct_path(self.came_from[current])
             return p + [current]
@@ -38,6 +42,7 @@ class AStar:
             return [current]
 
     def get_neighbors(self, node):
+        """ Return coordinates of neighboring tiles that are free to move through. """
         log.debug("getting neighbors of {}".format(node))
         x, y = node
         
@@ -55,6 +60,7 @@ class AStar:
         return neighbors
 
     def find_path(self, start, goal):
+        """ Use the A-star pathfinding algorithm to find a path between the start and end coordinates. """
         log.debug("pathfind from {} to {}".format(start, goal))
     
         self.closed_set = set()

@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7fd23a4-0279-4c40-994f-094c0e896581" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/levels/__init__.py" afterPath="$PROJECT_DIR$/src/levels/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/area.py" afterPath="$PROJECT_DIR$/src/area.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/astar.py" afterPath="$PROJECT_DIR$/src/astar.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/camera.py" afterPath="$PROJECT_DIR$/src/camera.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/data.py" afterPath="$PROJECT_DIR$/src/data.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/engine.py" afterPath="$PROJECT_DIR$/src/engine.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/inputdevice.py" afterPath="$PROJECT_DIR$/src/inputdevice.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/levels/level.py" afterPath="$PROJECT_DIR$/src/levels/level.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/levels/level1.py" afterPath="$PROJECT_DIR$/src/levels/level1.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/lvl1door.py" afterPath="$PROJECT_DIR$/src/objects/lvl1door.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/map.py" afterPath="$PROJECT_DIR$/src/map.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/message.py" afterPath="$PROJECT_DIR$/src/message.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/player.py" afterPath="$PROJECT_DIR$/src/player.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/textrect.py" afterPath="$PROJECT_DIR$/src/textrect.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="digital_heist.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,28 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="lvl1door.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/objects/lvl1door.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="50" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="level.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/levels/level.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="4" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/levels/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="0.06409048" vertical-offset="0" max-vertical-offset="1061">
+            <state line="4" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
               <folding />
             </state>
           </provider>
@@ -68,10 +38,8 @@
       <file leaf-file-name="computer.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/objects/computer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="50" selection-start="768" selection-end="768" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-              <folding>
-                <element signature="e#20#65#0" expanded="true" />
-              </folding>
+            <state line="21" column="50" selection-start="768" selection-end="768" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="510">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,7 +47,7 @@
       <file leaf-file-name="level1.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/levels/level1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="50" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.0" vertical-offset="199" max-vertical-offset="816">
+            <state line="44" column="50" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="1071">
               <folding />
             </state>
           </provider>
@@ -89,9 +57,7 @@
         <entry file="file://$PROJECT_DIR$/src/area.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="68" column="4" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.0" vertical-offset="951" max-vertical-offset="1632">
-              <folding>
-                <element signature="e#20#34#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -100,9 +66,7 @@
         <entry file="file://$PROJECT_DIR$/src/map.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="37" column="0" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.0" vertical-offset="743" max-vertical-offset="1360">
-              <folding>
-                <element signature="e#20#31#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -110,8 +74,28 @@
       <file leaf-file-name="astar.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/astar.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="55" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.0" vertical-offset="764" max-vertical-offset="1632">
+            <state line="19" column="69" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0" vertical-offset="673" max-vertical-offset="1734">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="camera.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/camera.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="0" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="guard.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/guard.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="40" selection-start="2410" selection-end="2410" vertical-scroll-proportion="0.36852026" vertical-offset="850" max-vertical-offset="3060">
+              <folding>
+                <element signature="e#20#33#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,9 +104,7 @@
         <entry file="file://$PROJECT_DIR$/src/engine.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="70" column="0" selection-start="1911" selection-end="1911" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1292">
-              <folding>
-                <element signature="e#21#38#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,9 +113,7 @@
         <entry file="file://$PROJECT_DIR$/src/player.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="78" column="88" selection-start="2450" selection-end="2450" vertical-scroll-proportion="0.0" vertical-offset="1253" max-vertical-offset="1870">
-              <folding>
-                <element signature="e#20#33#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -155,7 +135,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/exhibition.py" />
         <option value="$PROJECT_DIR$/src/TODO.txt" />
-        <option value="$PROJECT_DIR$/src/guard.py" />
         <option value="$PROJECT_DIR$/src/objects/interactable.py" />
         <option value="$PROJECT_DIR$/src/physics.py" />
         <option value="$PROJECT_DIR$/src/direction.py" />
@@ -172,9 +151,10 @@
         <option value="$PROJECT_DIR$/src/levels/level1.py" />
         <option value="$PROJECT_DIR$/src/area.py" />
         <option value="$PROJECT_DIR$/src/map.py" />
-        <option value="$PROJECT_DIR$/src/astar.py" />
         <option value="$PROJECT_DIR$/src/player.py" />
         <option value="$PROJECT_DIR$/src/levels/__init__.py" />
+        <option value="$PROJECT_DIR$/src/astar.py" />
+        <option value="$PROJECT_DIR$/src/guard.py" />
       </list>
     </option>
   </component>
@@ -304,9 +284,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHub/PortableGit_054f2e797ebafd44a30203088cd3d58663c627ef/bin/git.exe" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.splitter.details.proportions" value="0.32129514" />
     <property name="options.searchVisible" value="true" />
     <property name="SearchEverywhereHistory" value="" />
     <property name="recentsLimit" value="5" />
@@ -549,11 +529,9 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32252252" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="55" y="467" width="1858" height="366" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934684" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16167665" sideWeight="0.49954003" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40846366" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16167665" sideWeight="0.50045997" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -561,9 +539,11 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934684" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40846366" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -581,9 +561,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1598493" sideWeight="0.49954003" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299817" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -605,32 +585,94 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/data.py">
+    <entry file="file://$PROJECT_DIR$/src/objects/lvl1door.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+        <state line="21" column="50" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/levels/level.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="4" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/levels/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/objects/computer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="50" selection-start="768" selection-end="768" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/levels/level1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="50" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="1071">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/area.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="4" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.0" vertical-offset="951" max-vertical-offset="1632">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/map.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.0" vertical-offset="743" max-vertical-offset="1360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/astar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="55" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.0" vertical-offset="764" max-vertical-offset="1632">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/engine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="0" selection-start="1911" selection-end="1911" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1292">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="88" selection-start="2450" selection-end="2450" vertical-scroll-proportion="0.0" vertical-offset="1253" max-vertical-offset="1870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/inputdevice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="29" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="850">
-          <folding />
-        </state>
+        <state line="19" column="29" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="850" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="425">
-          <folding />
-        </state>
+        <state line="10" column="0" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="425" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/exhibition.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="13" selection-start="3681" selection-end="3681" vertical-scroll-proportion="0.0" vertical-offset="1992" max-vertical-offset="3060">
-          <folding />
-        </state>
+        <state line="128" column="13" selection-start="3681" selection-end="3681" vertical-scroll-proportion="0.0" vertical-offset="1992" max-vertical-offset="3060" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/guard.py">
@@ -654,105 +696,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <folding />
-        </state>
+        <state line="10" column="0" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TODO.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/guard.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="194" selection-end="194" vertical-scroll-proportion="-110.5" vertical-offset="0" max-vertical-offset="3077">
-          <folding>
-            <element signature="e#20#33#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/objects/interactable.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="930" selection-end="930" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <folding />
-        </state>
+        <state line="28" column="0" selection-start="930" selection-end="930" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/exhibition.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="35" selection-start="4524" selection-end="4524" vertical-scroll-proportion="0.0" vertical-offset="2386" max-vertical-offset="3026">
-          <folding />
-        </state>
+        <state line="159" column="35" selection-start="4524" selection-end="4524" vertical-scroll-proportion="0.0" vertical-offset="2386" max-vertical-offset="3026" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/physics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="25" selection-start="883" selection-end="883" vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="1122">
-          <folding />
-        </state>
+        <state line="26" column="25" selection-start="883" selection-end="883" vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="1122" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/direction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-          <folding>
-            <marker date="1396306747749" expanded="true" signature="-1:-1" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
-          </folding>
-        </state>
+        <state line="6" column="0" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="25" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0" vertical-offset="142" max-vertical-offset="1309">
-          <folding />
-        </state>
+        <state line="25" column="25" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0" vertical-offset="142" max-vertical-offset="1309" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/inputdevice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="782">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/camera.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <folding />
-        </state>
+        <state line="26" column="0" selection-start="611" selection-end="611" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="782" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/message.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
-          <folding />
-        </state>
+        <state line="10" column="0" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/textrect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
-          <folding />
-        </state>
+        <state line="10" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="26" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <folding />
-        </state>
+        <state line="15" column="26" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="0" selection-start="1911" selection-end="1911" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1292">
-          <folding>
-            <element signature="e#21#38#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -766,15 +766,6 @@
     <entry file="file://$PROJECT_DIR$/src/map.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="0" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.0" vertical-offset="743" max-vertical-offset="1360">
-          <folding>
-            <element signature="e#20#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/astar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="55" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.0" vertical-offset="764" max-vertical-offset="1632">
           <folding />
         </state>
       </provider>
@@ -782,18 +773,14 @@
     <entry file="file://$PROJECT_DIR$/src/area.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="4" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.0" vertical-offset="951" max-vertical-offset="1632">
-          <folding>
-            <element signature="e#20#34#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/player.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="88" selection-start="2450" selection-end="2450" vertical-scroll-proportion="0.0" vertical-offset="1253" max-vertical-offset="1870">
-          <folding>
-            <element signature="e#20#33#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -807,9 +794,7 @@
     <entry file="file://$PROJECT_DIR$/src/objects/computer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="50" selection-start="768" selection-end="768" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <folding>
-            <element signature="e#20#65#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -822,8 +807,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/levels/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="0.06409048" vertical-offset="0" max-vertical-offset="1061">
+        <state line="4" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/astar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="69" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0" vertical-offset="673" max-vertical-offset="1734">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/camera.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/guard.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="40" selection-start="2410" selection-end="2410" vertical-scroll-proportion="0.36852026" vertical-offset="850" max-vertical-offset="3060">
+          <folding>
+            <element signature="e#20#33#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
